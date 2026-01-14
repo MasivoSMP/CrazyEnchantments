@@ -56,11 +56,13 @@ tasks {
             "group" to project.group
         )
 
-        with(copySpec {
+        from("src/main/resources") {
+            exclude("*plugin.yml", "fabric.mod.json")
+        }
+
+        from("src/main/resources") {
             include("*plugin.yml", "fabric.mod.json")
-            from("src/main/resources") {
-                expand(inputs.properties)
-            }
-        })
+            expand(inputs.properties)
+        }
     }
 }

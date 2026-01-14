@@ -1528,14 +1528,31 @@ Enchantments:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7MultiArrow'
-    MaxPower: 5
-    Enchantment-Type: 'Bow'
+    MaxPower: 4
+      Enchantment-Type: 'Bow'
     Chance-System:
-      Base: 25
-      Increase: 10
+        Base: 25
+        Increase: 10
+    Arrow-Chances:
+        # Chance (percent) for each extra arrow in order (1 = 2 arrows total, 2 = 3 arrows total, etc.)
+        1:
+          Base: 20
+          Increase: 5
+        2:
+          Base: 10
+          Increase: 3
+        3:
+          Base: 6
+          Increase: 2
+        4:
+          Base: 3
+          Increase: 1
+        5:
+          Base: 1
+          Increase: 1
     Info:
-      Name: '&e&lMultiArrow &7(&bI-&bV&7)'
-      Description:
+        Name: '&e&lMultiArrow &7(&bI-&bV&7)'
+        Description:
         - '&7Has a chance to shoot'
         - '&7multiple arrows at once.'
         - ''

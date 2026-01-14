@@ -68,8 +68,24 @@ public enum ShopOption {
                 Currency.getCurrency(config.getString(costPath + "Currency", "Vault"))));
             } catch (Exception exception) {
                 plugin.getLogger().log(Level.SEVERE, "The option " + shopOption.getOptionPath() + " has failed to load.", exception);
+                shopOptions.put(shopOption, buildFallbackOption(shopOption));
             }
         }
+    }
+
+    private static Option buildFallbackOption(ShopOption shopOption) {
+        ItemBuilder item = new ItemBuilder().setName("&cError loading " + shopOption.getOptionPath());
+        return new Option(item, 0, false, 0, Currency.VAULT);
+    }
+
+    private Option getOption() {
+        Option option = shopOptions.get(this);
+        if (option != null) return option;
+
+        Option fallback = buildFallbackOption(this);
+        shopOptions.put(this, fallback);
+        plugin.getLogger().log(Level.WARNING, "The option " + getOptionPath() + " was not loaded. Using fallback data.");
+        return fallback;
     }
     
     public ItemStack getItem() {
@@ -77,23 +93,23 @@ public enum ShopOption {
     }
     
     public ItemBuilder getItemBuilder() {
-        return shopOptions.get(this).itemBuilder();
+        return getOption().itemBuilder();
     }
     
     public int getSlot() {
-        return shopOptions.get(this).slot();
+        return getOption().slot();
     }
     
     public boolean isInGUI() {
-        return shopOptions.get(this).inGUI();
+        return getOption().inGUI();
     }
     
     public int getCost() {
-        return shopOptions.get(this).cost();
+        return getOption().cost();
     }
     
     public Currency getCurrency() {
-        return shopOptions.get(this).currency();
+        return getOption().currency();
     }
     
     private String getOptionPath() {

@@ -18,6 +18,7 @@ import com.ryderbelserion.fusion.paper.scheduler.FoliaScheduler;
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.attribute.Attribute;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.damage.DamageSource;
 import org.bukkit.damage.DamageType;
 import org.bukkit.entity.Arrow;
@@ -85,10 +86,44 @@ public class BowEnchantments implements Listener {
         // MultiArrow only code below.
         if (EnchantUtils.isEventActive(CEnchantments.MULTIARROW, player, bow, enchants)) {
             int power = enchants.get(CEnchantments.MULTIARROW.getEnchantment());
+            int extraArrows = getMultiArrowExtraArrows(power);
 
-            for (int i = 1; i <= power; i++) this.bowUtils.spawnArrows(player, arrow, bow);
+            for (int i = 0; i < extraArrows; i++) this.bowUtils.spawnArrows(player, arrow, bow);
         }
 
+    }
+
+    private int getMultiArrowExtraArrows(int power) {
+        FileConfiguration enchantmentsFile = Files.ENCHANTMENTS.getFile();
+        String basePath = "Enchantments." + CEnchantments.MULTIARROW.getName() + ".Arrow-Chances";
+
+        if (!enchantmentsFile.isConfigurationSection(basePath)) return power;
+
+        int extraArrows = 0;
+
+        for (int extraIndex = 1; extraIndex <= power; extraIndex++) {
+            String entryPath = basePath + "." + extraIndex;
+            String baseChancePath = entryPath + ".Base";
+
+            if (!enchantmentsFile.contains(baseChancePath)) break;
+
+            int baseChance = enchantmentsFile.getInt(baseChancePath);
+            int increaseChance = enchantmentsFile.getInt(entryPath + ".Increase", 0);
+            int chance = baseChance + (increaseChance * (power - 1));
+
+            if (!rollChance(chance)) break;
+
+            extraArrows++;
+        }
+
+        return extraArrows;
+    }
+
+    private boolean rollChance(int chance) {
+        if (chance >= 100) return true;
+        if (chance <= 0) return false;
+
+        return this.methods.getRandomNumber(0, 100) <= chance;
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
