@@ -257,7 +257,7 @@ public class ArmorEnchantments implements Listener {
             }
 
             if (EnchantUtils.isEventActive(CEnchantments.SHOCKWAVE, player, armor, enchants)) {
-                damager.setVelocity(player.getLocation().getDirection().multiply(2).setY(1.25));
+                damager.setVelocity(player.getLocation().getDirection().multiply(1.5).setY(1));
             }
 
             if (player.getHealth() <= event.getFinalDamage() && EnchantUtils.isEventActive(CEnchantments.SYSTEMREBOOT, player, armor, enchants)) {
