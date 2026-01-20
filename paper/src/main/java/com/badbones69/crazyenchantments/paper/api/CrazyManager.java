@@ -703,9 +703,6 @@ public class CrazyManager {
         enchants.get(CEnchantments.HULK).put(PotionEffectType.RESISTANCE, -1);
         enchants.get(CEnchantments.HULK).put(PotionEffectType.SLOWNESS, -1);
 
-        enchants.put(CEnchantments.VALOR, new HashMap<>());
-        enchants.get(CEnchantments.VALOR).put(PotionEffectType.RESISTANCE, -1);
-
         enchants.put(CEnchantments.OVERLOAD, new HashMap<>());
         enchants.get(CEnchantments.OVERLOAD).put(PotionEffectType.HEALTH_BOOST, -1);
 

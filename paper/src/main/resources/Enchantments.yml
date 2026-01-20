@@ -1431,17 +1431,18 @@ Enchantments:
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
-  Valor:
-    Enabled: true
-    Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Valor'
-    MaxPower: 2
-    Enchantment-Type: 'Armor'
-    Info:
-      Name: '&e&lValor &7(&bI-&bII&7)'
-      Description:
-        - '&7Gives damage resistance'
-        - '&7based on your enchantment level.'
+    Valor:
+      Enabled: true
+      Sound: "ENTITY_PLAYER_LEVELUP"
+      Name: '&7Valor'
+      MaxPower: 2
+      Enchantment-Type: 'Armor'
+      Cooldown: 5
+      Info:
+        Name: '&e&lValor &7(&bI-&bII&7)'
+        Description:
+          - '&7Gives damage resistance'
+          - '&7for 10 seconds when hit.'
         - ''
         - '&6Found in:'
         - '&7 - &a&l&nCommon'
