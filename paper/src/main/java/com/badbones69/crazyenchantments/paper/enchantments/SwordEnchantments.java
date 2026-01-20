@@ -232,7 +232,7 @@ public class SwordEnchantments implements Listener {
 
         if (EnchantUtils.isEventActive(CEnchantments.VAMPIRE, damager, item, enchantments)) {
             int level = enchantments.get(CEnchantments.VAMPIRE.getEnchantment());
-            damager.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 5 * 20, 0));
+            damager.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 10 * 20, 1));
         }
 
         if (EnchantUtils.isEventActive(CEnchantments.BLINDNESS, damager, item, enchantments)) {

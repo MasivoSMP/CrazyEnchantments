@@ -121,7 +121,7 @@ public class BowUtils {
                     entityLocation.getBlock().setType(Material.AIR);
                     webBlocks.remove(entityLocation.getBlock());
                 }
-            }.runDelayed(2 * 20);
+            }.runDelayed(1 * 30);
         } else {
             setWebBlocks(hitEntity);
         }
@@ -149,8 +149,8 @@ public class BowUtils {
                                 webBlocks.remove(block);
                             }
                         }
-                    }.runDelayed(2 * 20);
-                }
+                    }.runDelayed(1 * 30); // 1.5 segundos. 20 ticks = 1 segundo, 30 ticks = 1.5 segundos.
+                } 
             }
         }.execute();
     }
