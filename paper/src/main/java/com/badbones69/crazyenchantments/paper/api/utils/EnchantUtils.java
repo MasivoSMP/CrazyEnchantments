@@ -3,6 +3,7 @@ package com.badbones69.crazyenchantments.paper.api.utils;
 import com.badbones69.crazyenchantments.paper.CrazyEnchantments;
 import com.badbones69.crazyenchantments.paper.api.enums.CEnchantments;
 import com.badbones69.crazyenchantments.paper.api.events.EnchantmentUseEvent;
+import com.badbones69.crazyenchantments.paper.api.objects.CEPlayer;
 import com.badbones69.crazyenchantments.paper.api.objects.CEnchantment;
 import com.badbones69.crazyenchantments.paper.api.objects.Category;
 import org.bukkit.entity.Entity;
@@ -42,11 +43,13 @@ public class EnchantUtils {
     }
 
     public static boolean isEventActive(CEnchantments enchant, Entity damager, ItemStack item, Map<CEnchantment, Integer> enchants, double multiplier) {
-        return isActive((Player) damager, enchant, enchants, multiplier) && normalEnchantEvent(enchant, damager, item);
+        return isActive((Player) damager, enchant, enchants, multiplier)
+                && normalEnchantEvent(enchant, damager, item)
+                && applyCooldown((Player) damager, enchant, 0);
     }
 
     public static boolean isMassBlockBreakActive(Player player, CEnchantments enchant, Map<CEnchantment, Integer> enchants) {
-        return isActive(player, enchant, enchants, 1.0);
+        return isActive(player, enchant, enchants, 1.0) && applyCooldown(player, enchant, 0);
     }
 
 
@@ -81,9 +84,9 @@ public class EnchantUtils {
     }
 
     public static boolean isAuraActive(Player player, CEnchantments enchant, Map<CEnchantment, Integer> enchants) {
-        if (plugin.getStarter().getCrazyManager().getCEPlayer(player.getUniqueId()).onEnchantCooldown(enchant, 20*3)) return false;
+        if (!isActive(player, enchant, enchants)) return false;
 
-        return isActive(player, enchant, enchants);
+        return applyCooldown(player, enchant, 20 * 3);
     }
 
     public static boolean isArmorEventActive(Player player, CEnchantments enchant, ItemStack item) {
@@ -97,6 +100,19 @@ public class EnchantUtils {
     public static boolean isMoveEventActive(CEnchantments enchant, Player player, Map<CEnchantment, Integer> enchants) {
         if (!isActive(player, enchant, enchants)) return false;
 
-        return !plugin.getStarter().getCrazyManager().getCEPlayer(player.getUniqueId()).onEnchantCooldown(enchant, 20);
+        return applyCooldown(player, enchant, 20);
+    }
+
+    private static boolean applyCooldown(Player player, CEnchantments enchant, int fallbackTicks) {
+        CEnchantment cEnchantment = enchant.getEnchantment();
+        int cooldownSeconds = cEnchantment != null ? cEnchantment.getCooldown() : 0;
+        int cooldownTicks = cooldownSeconds > 0 ? cooldownSeconds * 20 : fallbackTicks;
+
+        if (cooldownTicks <= 0) return true;
+
+        CEPlayer cePlayer = plugin.getStarter().getCrazyManager().getCEPlayer(player);
+        if (cePlayer == null) return true;
+
+        return !cePlayer.onEnchantCooldown(enchant, cooldownTicks);
     }
 }

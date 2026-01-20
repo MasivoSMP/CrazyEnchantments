@@ -230,13 +230,9 @@ public class SwordEnchantments implements Listener {
             if (damager.getSaturation() + (2 * enchantments.get(CEnchantments.NUTRITION.getEnchantment())) >= 20) damager.setSaturation(20);
         }
 
-        if (damager.getHealth() > 0 && EnchantUtils.isEventActive(CEnchantments.VAMPIRE, damager, item, enchantments)) {
-            // Uses getValue as if the player has health boost it is modifying the base so the value after the modifier is needed.
-            double maxHealth = damager.getAttribute(Attribute.MAX_HEALTH).getValue();
-
-            if (damager.getHealth() + event.getDamage() / 2 < maxHealth) damager.setHealth(damager.getHealth() + event.getDamage() / 2);
-
-            if (damager.getHealth() + event.getDamage() / 2 >= maxHealth) damager.setHealth(maxHealth);
+        if (EnchantUtils.isEventActive(CEnchantments.VAMPIRE, damager, item, enchantments)) {
+            int level = enchantments.get(CEnchantments.VAMPIRE.getEnchantment());
+            damager.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 5 * 20, 0));
         }
 
         if (EnchantUtils.isEventActive(CEnchantments.BLINDNESS, damager, item, enchantments)) {

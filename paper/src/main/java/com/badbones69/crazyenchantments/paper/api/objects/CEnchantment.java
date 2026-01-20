@@ -41,6 +41,7 @@ public class CEnchantment {
     private String infoName;
     private int chance;
     private int chanceIncrease;
+    private int cooldown;
     private List<String> infoDescription;
     private final List<Category> categories;
     private EnchantmentType enchantmentType;
@@ -57,6 +58,7 @@ public class CEnchantment {
         this.infoName = ColorUtils.color("&7" + name);
         this.chance = 0;
         this.chanceIncrease = 0;
+        this.cooldown = 0;
         this.infoDescription = new ArrayList<>();
         this.categories = new ArrayList<>();
         this.enchantmentType = null;
@@ -169,6 +171,16 @@ public class CEnchantment {
 
     public CEnchantment setChanceIncrease(int chanceIncrease) {
         this.chanceIncrease = chanceIncrease;
+
+        return this;
+    }
+
+    public int getCooldown() {
+        return this.cooldown;
+    }
+
+    public CEnchantment setCooldown(int cooldown) {
+        this.cooldown = Math.max(0, cooldown);
 
         return this;
     }

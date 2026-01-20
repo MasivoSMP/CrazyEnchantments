@@ -251,20 +251,21 @@ Enchantments:
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
-  Vampire:
-    Enabled: true
-    Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Vampire'
-    MaxPower: 5
-    Enchantment-Type: 'Sword'
-    Chance-System:
-      Base: 5
-      Increase: 5
+    Vampire:
+      Enabled: true
+      Sound: "ENTITY_PLAYER_LEVELUP"
+      Name: '&7Vampire'
+      MaxPower: 5
+      Enchantment-Type: 'Sword'
+      Cooldown: 5
+      Chance-System:
+        Base: 5
+        Increase: 5
     Info:
       Name: '&e&lVampire &7(&bI-&bV&7)'
-      Description:
-        - '&7Has a chance to heal'
-        - '&7you when fighting.'
+        Description:
+          - '&7Has a chance to give'
+          - '&7Absorption for 5 seconds.'
         - ''
         - '&6Found in:'
         - '&7 - &a&l&nCommon'

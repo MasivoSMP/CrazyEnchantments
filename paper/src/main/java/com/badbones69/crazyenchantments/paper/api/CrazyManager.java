@@ -239,6 +239,7 @@ public class CrazyManager {
                 .setCategories(enchants.getStringList(path + ".Categories"))
                 .setChance(cEnchantment.getChance())
                 .setChanceIncrease(cEnchantment.getChanceIncrease())
+                .setCooldown(enchants.getInt(path + ".Cooldown"))
                 .setSound(enchants.getString(path + ".Sound"))
                 .setConflicts(enchants.getStringList(path + ".Conflicts"));
 
