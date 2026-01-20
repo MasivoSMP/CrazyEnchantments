@@ -17,9 +17,9 @@ public class ArmorEnchantmentManager {
 
         if (CEnchantments.FORTIFY.isActivated()) this.armorEnchantments.add(new ArmorEnchantment(CEnchantments.FORTIFY, new PotionEffects(PotionEffectType.WEAKNESS, 5 * 20, 0), true));
 
-        if (CEnchantments.FREEZE.isActivated()) this.armorEnchantments.add(new ArmorEnchantment(CEnchantments.FREEZE, new PotionEffects(PotionEffectType.SLOWNESS, 3 * 20, 1), true));
+        if (CEnchantments.FREEZE.isActivated()) this.armorEnchantments.add(new ArmorEnchantment(CEnchantments.FREEZE, new PotionEffects(PotionEffectType.SLOWNESS, 1 * 20, 0), true));
 
-        if (CEnchantments.PAINGIVER.isActivated()) this.armorEnchantments.add(new ArmorEnchantment(CEnchantments.PAINGIVER, new PotionEffects(PotionEffectType.POISON, 3 * 20, 0), true));
+        if (CEnchantments.PAINGIVER.isActivated()) this.armorEnchantments.add(new ArmorEnchantment(CEnchantments.PAINGIVER, new PotionEffects(PotionEffectType.POISON, 2 * 20, 0), true));
 
         if (CEnchantments.SMOKEBOMB.isActivated()) this.armorEnchantments.add(new ArmorEnchantment(CEnchantments.SMOKEBOMB, Arrays.asList(new PotionEffects(PotionEffectType.SLOWNESS, 3 * 20, 1), new PotionEffects(PotionEffectType.BLINDNESS, 3 * 20, 0)), false));
 

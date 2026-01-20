@@ -121,7 +121,7 @@ public class BowUtils {
                     entityLocation.getBlock().setType(Material.AIR);
                     webBlocks.remove(entityLocation.getBlock());
                 }
-            }.runDelayed(5 * 20);
+            }.runDelayed(2 * 20);
         } else {
             setWebBlocks(hitEntity);
         }
@@ -149,7 +149,7 @@ public class BowUtils {
                                 webBlocks.remove(block);
                             }
                         }
-                    }.runDelayed(5 * 20);
+                    }.runDelayed(2 * 20);
                 }
             }
         }.execute();
