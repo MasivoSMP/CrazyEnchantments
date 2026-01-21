@@ -304,7 +304,7 @@ public class ArmorEnchantments implements Listener {
             }
 
             if (EnchantUtils.isEventActive(CEnchantments.VALOR, player, armor, enchants)) {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, 10 * 20, 1));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, 10 * 20, 0));
             }
 
             if (EnchantUtils.isEventActive(CEnchantments.INSOMNIA, player, armor, enchants)) damager.damage(event.getDamage() + enchants.get(CEnchantments.INSOMNIA.getEnchantment()));

@@ -23,7 +23,7 @@ Enchantments:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
     #The in-game name of the enchantment.
-    Name: '&7Glowing'
+    Name: '&7Brillo'
     #Max lvl the enchantment goes up to.
     MaxPower: 1
     #The type of items that can be enchanted with the enchantment.
@@ -31,17 +31,17 @@ Enchantments:
     #Info for the enchantment
     Info:
       #Name of the item in the info GUI.
-      Name: '&e&lGlowing &7(&bI&7)'
+      Name: '&e&lBrillo &7(&bI&7)'
       #The description of what it does.
       Description:
-        - '&7Give you night vision'
-        - '&7when you put it on you.'
+        - '&7Obtienes visión nocturna'
+        - '&7cuando te lo equipas'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aHelmets'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aCascos'
     #All the categories the Enchantment can be found in
     Categories:
       - 'Common'
@@ -53,27 +53,27 @@ Enchantments:
   BurnShield:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7BurnShield'
+    Name: '&7Escudo Igneo'
     MaxPower: 1
     Enchantment-Type: 'Armor'
     Info:
-      Name: '&e&lBurn Shield &7(&bI&7)'
+      Name: '&e&lEscudo Igneo &7(&bI&7)'
       Description:
-        - '&7Gives fire resistance'
-        - '&7when you put it on.'
+        - '&7Obtienes resistencia al fuego'
+        - '&7cuando lo tengas equipado.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Piercing:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Piercing'
     MaxPower: 3
@@ -87,11 +87,11 @@ Enchantments:
         - '&7Has a chance to deal'
         - '&7double damage to your enemy.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArcos'
     Categories:
       - 'Common'
       - 'Rare'
@@ -100,20 +100,20 @@ Enchantments:
   OverLoad:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7OverLoad'
+    Name: '&b&lSobrecarga'
     MaxPower: 5
     Enchantment-Type: 'Armor'
     Info:
-      Name: '&e&lOverload &7(&bI-&bV&7)'
+      Name: '&e&lSobrecarga &7(&bI-&bV&7)'
       Description:
-        - '&7Gives a health boost'
-        - '&7when you put it on.'
+        - '&7Obtienes una mejora de vida'
+        - '&7cuando lo equipas.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -122,20 +122,20 @@ Enchantments:
   SelfDestruct:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7SelfDestruct'
+    Name: '&7Autodestrucción'
     MaxPower: 5
     Enchantment-Type: 'Armor'
     Info:
-      Name: '&e&lSelf Destruct &7(&bI-&bV&7)'
+      Name: '&e&lAutodestrucción &7(&bI-&bV&7)'
       Description:
-        - '&7When you die there will'
-        - '&7be an explosion where you died.'
+        - '&7Cuando mueres lanzas'
+        - '&7una explosión.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -144,20 +144,20 @@ Enchantments:
   Springs:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Springs'
+    Name: '&7Resortes'
     MaxPower: 5
     Enchantment-Type: 'Boots'
     Info:
-      Name: '&e&lSprings &7(&bI-&bV&7)'
+      Name: '&e&lResortes &7(&bI-&bV&7)'
       Description:
-        - '&7Gives you a small'
-        - '&7jump boost while wearing it.'
+        - '&7Aumenta tu poder de'
+        - '&7salto mientras lo usas.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBoots'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aBotas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -166,27 +166,27 @@ Enchantments:
   Gears:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Gears'
+    Name: '&7Velocidad'
     MaxPower: 3
     Enchantment-Type: 'Boots'
     Info:
-      Name: '&e&lGears &7(&bI-&bIII&7)'
+      Name: '&e&lVelocidad &7(&bI-&bIII&7)'
       Description:
-        - '&7Gives a speed boost'
-        - '&7when you put it on.'
+        - '&7Te aumenta la velocidad'
+        - '&7cuando lo tienes equipado.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBoots'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aBotas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Hulk:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Hulk'
     MaxPower: 2
@@ -197,11 +197,11 @@ Enchantments:
         - '&7Gives strength, damage resistance,'
         - '&7and slowness while wearing it.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -210,27 +210,27 @@ Enchantments:
   Mermaid:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Mermaid'
+    Name: '&7Sirena'
     MaxPower: 3
     Enchantment-Type: 'Helmet'
     Info:
-      Name: '&e&lMermaid &7(&bI-&bIII&7)'
+      Name: '&e&lSirena &7(&bI-&bIII&7)'
       Description:
-        - '&7Gives you water breathing'
-        - '&7when you put it on.'
+        - '&7Te otorga respiración'
+        - '&7bajo el agua cuando te lo equipas.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aHelmets'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aCascos'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Ninja:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Ninja'
     MaxPower: 2
@@ -241,44 +241,44 @@ Enchantments:
         - '&7Gives speed and health boost'
         - '&7when you put it on.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
-    Vampire:
-      Enabled: true
-      Sound: "ENTITY_PLAYER_LEVELUP"
-      Name: '&7Vampire'
-      MaxPower: 5
-      Enchantment-Type: 'Sword'
-      Cooldown: 5
-      Chance-System:
-        Base: 5
-        Increase: 5
+  Vampire:
+    Enabled: true
+    Sound: "ENTITY_PLAYER_LEVELUP"
+    Name: '&7Determinación'
+    MaxPower: 3
+    Enchantment-Type: 'Sword'
+    Cooldown: 20
+    Chance-System:
+      Base: 2
+      Increase: 2
     Info:
-      Name: '&e&lVampire &7(&bI-&bV&7)'
-        Description:
-          - '&7Has a chance to give'
-          - '&7Absorption for 5 seconds.'
+      Name: '&e&lDeterminación &7(&bI-&bV&7)'
+      Description:
+        - '&7Tienes una probabilidad de'
+        - '&7darte Absorption mientras combates.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   LifeSteal:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7LifeSteal'
     MaxPower: 5
@@ -292,11 +292,11 @@ Enchantments:
         - '&7Has a chance to steal'
         - '&7health from your enemy.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -308,25 +308,28 @@ Enchantments:
     Name: '&7Doctor'
     MaxPower: 3
     Enchantment-Type: 'Bow'
+    Chance-System:
+      Base: 2
+      Increase: 2
     Info:
       Name: '&e&lDoctor &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to'
-        - '&7heal a friendly'
-        - '&7player that you hit.'
+        - '&7Tiene una probabilidad'
+        - '&7de curar al objetivo'
+        - '&7al que golpee la flecha.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArcos'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Boom:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Boom'
     MaxPower: 3
@@ -340,11 +343,11 @@ Enchantments:
         - '&7Has a chance to spawn'
         - '&7TnT where the arrow lands.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArcos'
     Categories:
       - 'Common'
       - 'Rare'
@@ -353,30 +356,31 @@ Enchantments:
   Venom:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Venom'
+    Name: '&7Veneno'
     MaxPower: 5
-    Enchantment-Type: 'Bow'
+    Enchantment-Type: 'Tool'
+    Cooldown: 5
     Chance-System:
-      Base: 10
-      Increase: 5
+      Base: 1
+      Increase: 1
     Info:
-      Name: '&e&lVenom &7(&bI-&bV&7)'
+      Name: '&e&lVeneno &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&7your enemy poison.'
+        - '&7Tiene una posibilidad'
+        - '&7de inflingir veneno.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   DoubleDamage:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7DoubleDamage'
     MaxPower: 3
@@ -390,11 +394,11 @@ Enchantments:
         - '&7Has a chance to'
         - '&7deal double damage.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -403,30 +407,30 @@ Enchantments:
   SlowMo:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7SlowMo'
+    Name: '&7Lentitud'
     MaxPower: 3
     Enchantment-Type: 'Sword'
     Chance-System:
       Base: 5
       Increase: 5
     Info:
-      Name: '&e&lSlowMo &7(&bI-&bIII&7)'
+      Name: '&e&lLentitud &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&7your enemy slowness.'
+        - '&7Tiene una probabilidad de'
+        - '&7inflingir lentitud.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Blindness:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Blindness'
     MaxPower: 2
@@ -440,43 +444,43 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy blindness.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Viper:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Viper'
+    Name: '&7Venenoso'
     MaxPower: 3
     Enchantment-Type: 'Sword'
     Chance-System:
       Base: 10
       Increase: 5
     Info:
-      Name: '&e&lViper &7(&bI-&bIII&7)'
+      Name: '&e&lVenenoso &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&7your enemy poison.'
+        - '&7Tienes una probabilidad de'
+        - '&7inflingir veneno a tu enemigo.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   AntiGravity:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7AntiGravity'
     MaxPower: 3
@@ -487,18 +491,18 @@ Enchantments:
         - '&7Gives a high jump boost'
         - '&7when you put it on.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBoots'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aBotas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   FastTurn:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7FastTurn'
     MaxPower: 2
@@ -512,11 +516,11 @@ Enchantments:
         - '&7Has a chance to'
         - '&7deal more damage.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -525,30 +529,30 @@ Enchantments:
   LightWeight:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7LightWeight'
+    Name: '&7Ligero'
     MaxPower: 3
     Enchantment-Type: 'Sword'
     Chance-System:
       Base: 15
       Increase: 5
     Info:
-      Name: '&e&lLight Weight &7(&bI-&bIII&7)'
+      Name: '&e&lLigero &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&7you haste when fighting.'
+        - '&7Tiene una probabilidad de'
+        - '&7otorgar Haste mientras peleas.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Blessed:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Blessed'
     MaxPower: 3
@@ -562,11 +566,11 @@ Enchantments:
         - '&7Has a chance to'
         - '&7remove all negative effects.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -575,30 +579,30 @@ Enchantments:
   FeedMe:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7FeedMe'
+    Name: '&7Nutritivo'
     MaxPower: 5
     Enchantment-Type: 'Axe'
     Chance-System:
       Base: 10
       Increase: 5
     Info:
-      Name: '&e&lFeedMe &7(&bI-&bV&7)'
+      Name: '&e&lNutritivo &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to'
-        - '&7feed you while fighting.'
+        - '&7Tiene una probabilidad de'
+        - '&7alimentarte mientras peleas.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Dizzy:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Dizzy'
     MaxPower: 3
@@ -612,18 +616,18 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy confusion.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Berserk:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Berserk'
     MaxPower: 3
@@ -637,11 +641,11 @@ Enchantments:
         - '&7Has a chance to give you'
         - '&7strength and mining fatigue.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -650,30 +654,30 @@ Enchantments:
   Cursed:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Cursed'
+    Name: '&7Maldito'
     MaxPower: 3
     Enchantment-Type: 'Axe'
     Chance-System:
       Base: 10
       Increase: 5
     Info:
-      Name: '&e&lCursed &7(&bI-&bIII&7)'
+      Name: '&e&lMaldito &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&7your enemy mining fatigue.'
+        - '&7Tiene una probabilidad de'
+        - '&7inflingir fatiga al enemigo.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Rekt:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Rekt'
     MaxPower: 3
@@ -687,17 +691,17 @@ Enchantments:
         - '&7Has a chance to'
         - '&7deal double the damage.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   TreeFeller:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7TreeFeller'
     MaxPower: 5
@@ -711,11 +715,11 @@ Enchantments:
         - '&7Lets you cut down'
         - '&7trees a lot faster.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -724,23 +728,23 @@ Enchantments:
   Enlightened:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Enlightened'
-    MaxPower: 5
+    Name: '&7Bendito'
+    MaxPower: 3
     Enchantment-Type: 'Armor'
     Chance-System:
-      Base: 10
-      Increase: 5
+      Base: 0.5
+      Increase: 0.5
     Info:
-      Name: '&e&lEnlightened &7(&bI-&bV&7)'
+      Name: '&e&lBendito &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to'
-        - '&7heal you while being attacked.'
+        - '&7Tiene una probabilidad de'
+        - '&7curarte mientras te atacan.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -749,30 +753,31 @@ Enchantments:
   Freeze:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Freeze'
+    Name: '&7Congelar'
     MaxPower: 2
     Enchantment-Type: 'Armor'
+    Cooldown: 5
     Chance-System:
-      Base: 10
-      Increase: 5
+      Base: 1
+      Increase: 2
     Info:
-      Name: '&e&lFreeze &7(&bI-&bII&7)'
+      Name: '&e&lCongelar &7(&bI-&bII&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&7your enemy slowness.'
+        - '&7Tiene una probabilidad de'
+        - '&7ralentizar a tus atacantes.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Fortify:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Fortify'
     MaxPower: 3
@@ -786,11 +791,11 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy weakness.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -799,23 +804,23 @@ Enchantments:
   Molten:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Molten'
+    Name: '&7Rojo Vivo'
     MaxPower: 5
     Enchantment-Type: 'Armor'
     Chance-System:
       Base: 10
       Increase: 1
     Info:
-      Name: '&e&lMolten &7(&bI-&bV&7)'
+      Name: '&e&lAl Rojo Vivo &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to set'
-        - '&7set your enemy on fire.'
+        - '&7Tiene una probabilidad de'
+        - '&7prender fuego a tus atacantes.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -824,23 +829,24 @@ Enchantments:
   PainGiver:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7PainGiver'
-    MaxPower: 4
+    Name: '&7Toxinas'
+    MaxPower: 3
     Enchantment-Type: 'Armor'
+    Cooldown: 5
     Chance-System:
-      Base: 10
-      Increase: 5
+      Base: 1
+      Increase: 2
     Info:
-      Name: '&e&lPain Giver &7(&bI-&bIV&7)'
+      Name: '&e&lToxinas &7(&bI-&bIV&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&7your enemy poison.'
+        - '&7Tienes una probabilidad de'
+        - '&7inflingir veneno a tu atacante.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -849,30 +855,30 @@ Enchantments:
   Savior:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Savior'
+    Name: '&7Resistencia'
     MaxPower: 5
     Enchantment-Type: 'Armor'
     Chance-System:
       Base: 15
       Increase: 5
     Info:
-      Name: '&e&lSavior &7(&bI-&bV&7)'
+      Name: '&e&lResistencia &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to cut'
-        - '&7your incoming damage by half.'
+        - '&7Tiene una probabilidad de'
+        - '&7disminuir el daño recibido a la mitad.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Nursery:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Nursery'
     MaxPower: 5
@@ -886,11 +892,11 @@ Enchantments:
         - '&7Has a chance to'
         - '&7heal you while walking.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -899,23 +905,23 @@ Enchantments:
   AutoSmelt:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7AutoSmelt'
+    Name: '&7Caliente'
     MaxPower: 5
     Enchantment-Type: 'PickAxe'
     Chance-System:
       Base: 25
       Increase: 25
     Info:
-      Name: '&e&lAuto Smelt &7(&bI-&bV&7)'
+      Name: '&e&lCaliente &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to auto smelt'
-        - '&7ores and give more ingots.'
+        - '&7Tiene una probabilidad de'
+        - '&7quemar los ores y dar mas lingotes.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aPickaxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aPicos'
     Categories:
       - 'Common'
       - 'Rare'
@@ -924,23 +930,23 @@ Enchantments:
   Experience:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Experience'
+    Name: '&7Experiencia'
     MaxPower: 3
     Enchantment-Type: 'PickAxe'
     Chance-System:
       Base: 25
       Increase: 25
     Info:
-      Name: '&e&lExperience &7(&bI-&bIII&7)'
+      Name: '&e&lExperiencia &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to give'
-        - '&72x or more xp from ores.'
+        - '&7Tiene una probabilidad de'
+        - '&7dar mas experiencia.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aPickaxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aPicos'
     Categories:
       - 'Common'
       - 'Rare'
@@ -949,27 +955,27 @@ Enchantments:
   Telepathy:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Telepathy'
+    Name: '&7Telepatía'
     MaxPower: 1
     Enchantment-Type: 'Tool'
     Info:
-      Name: '&e&lTelepathy &7(&bI&7)'
+      Name: '&e&lTelepatía &7(&bI&7)'
       Description:
-        - '&7Will automatically send'
-        - '&7mined blocks to your inventory.'
+        - '&7Envía los bloques minados'
+        - '&7directamente a tu inventario.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aTools'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHerramientas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Haste:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Haste'
     MaxPower: 3
@@ -980,11 +986,11 @@ Enchantments:
         - '&7Gives you haste when'
         - '&7holding the item in your hand.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aTools'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHerramientas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -993,27 +999,27 @@ Enchantments:
   Oxygenate:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Oxygenate'
+    Name: '&7Oxigenado'
     MaxPower: 1
     Enchantment-Type: 'Tool'
     Info:
-      Name: '&e&lOxygenate &7(&bI&7)'
+      Name: '&e&lOxigenado &7(&bI&7)'
       Description:
-        - '&7Gives you water breathing'
-        - '&7when holding item in your hand.'
+        - '&7Otorga respiración bajo el agua'
+        - '&7mientras se sotenga en la mano.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aTools'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHerramientas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   IceFreeze:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7IceFreeze'
     MaxPower: 1
@@ -1027,36 +1033,36 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy slowness.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArcos'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Lightning:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Lightning'
+    Name: '&7Rayo'
     MaxPower: 1
     Enchantment-Type: 'Bow'
     Chance-System:
-      Base: 25
-      Increase: 10
+      Base: 1
+      Increase: 1
     Info:
-      Name: '&e&lLightning &7(&bI&7)'
+      Name: '&e&lRayo &7(&bI&7)'
       Description:
-        - '&7Has a chance to strike'
-        - '&7lightning where the arrow lands.'
+        - '&7Tienes una muy pequeña probabilidad de'
+        - '&7atraer un rayo donde cae la flecha.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArcos'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1065,30 +1071,30 @@ Enchantments:
   Decapitation:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Decapitation'
+    Name: '&7Decapitación'
     MaxPower: 5
     Enchantment-Type: 'Axe'
     Chance-System:
       Base: 10
       Increase: 10
     Info:
-      Name: '&e&lDecapitation &7(&bI-&bV&7)'
+      Name: '&e&lDecapitación &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to drop'
-        - '&7the player''s head on death.'
+        - '&7Aumenta las probabilidades'
+        - '&7de obtener la cabeza de un jugador.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Confusion:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Confusion'
     MaxPower: 4
@@ -1102,18 +1108,18 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy confusion.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Disarmer:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Disarmer'
     MaxPower: 3
@@ -1127,18 +1133,18 @@ Enchantments:
         - '&7Has a chance to take a'
         - '&7random armor piece off your enemy.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Execute:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Execute'
     MaxPower: 5
@@ -1149,11 +1155,11 @@ Enchantments:
         - '&7Has a chance to get strength'
         - '&7when your enemy is low on health.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1162,30 +1168,30 @@ Enchantments:
   Headless:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Headless'
+    Name: '&7Decapitación'
     MaxPower: 5
     Enchantment-Type: 'Sword'
     Chance-System:
       Base: 10
       Increase: 10
     Info:
-      Name: '&e&lHeadless &7(&bI-&bV&7)'
+      Name: '&e&lDecapitación &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to drop'
-        - '&7your enemy''s head on death.'
+        - '&7Aumenta las probabilidades'
+        - '&7de obtener la cabeza de un jugador.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Inquisitive:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Inquisitive'
     MaxPower: 5
@@ -1199,18 +1205,18 @@ Enchantments:
         - '&7Has a chance to double or more XP'
         - '&7based on the enchantment level.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Insomnia:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Insomnia'
     MaxPower: 1
@@ -1224,11 +1230,11 @@ Enchantments:
         - '&7Gives confusion, mining fatigue, and slowness'
         - '&7but has a high chance of doing double the damage.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1237,23 +1243,23 @@ Enchantments:
   Nutrition:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Nutrition'
+    Name: '&7Nutritivo'
     MaxPower: 3
     Enchantment-Type: 'Sword'
     Chance-System:
       Base: 15
       Increase: 5
     Info:
-      Name: '&e&lNutrition &7(&bI-&bIII&7)'
+      Name: '&e&lNutritivo &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to'
-        - '&7feed you while fighting.'
+        - '&7Tienes una probabilidad de'
+        - '&7alimentarte mientras peleas.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1262,30 +1268,30 @@ Enchantments:
   Obliterate:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Obliterate'
+    Name: '&7Obliterar'
     MaxPower: 3
     Enchantment-Type: 'Sword'
     Chance-System:
-      Base: 15
-      Increase: 5
+      Base: 2
+      Increase: 2
     Info:
-      Name: '&e&lObliterate &7(&bI-&bIII&7)'
+      Name: '&e&lObliterar &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to send'
-        - '&7your enemy flying backwards.'
+        - '&7Tienes una probabilidad de'
+        - '&7enviar a tu enemigo lejos.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Paralyze:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Paralyze'
     MaxPower: 3
@@ -1299,11 +1305,11 @@ Enchantments:
         - '&7Has a chance to give your'
         - '&7enemy high mining fatigue and slowness.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1312,30 +1318,30 @@ Enchantments:
   SkillSwipe:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7SkillSwipe'
+    Name: '&7Ladrón'
     MaxPower: 5
     Enchantment-Type: 'Sword'
     Chance-System:
       Base: 5
       Increase: 5
     Info:
-      Name: '&e&lSkill Swipe &7(&bI-&bV&7)'
+      Name: '&e&lLadrón &7(&bI-&bV&7)'
       Description:
-        - '&7Has a chance to steal xp'
-        - '&7from your enemy while fighting.'
+        - '&7Tienes una probabilidad de'
+        - '&7robarle XP a tu enemigo.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Snare:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Snare'
     MaxPower: 3
@@ -1349,18 +1355,18 @@ Enchantments:
         - '&7Has a chance to give your'
         - '&7enemy slowness and mining fatigue.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Trap:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Trap'
     MaxPower: 2
@@ -1374,18 +1380,18 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy high slowness.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Wither:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Wither'
     MaxPower: 3
@@ -1399,11 +1405,11 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy high wither.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1412,50 +1418,53 @@ Enchantments:
   Rage:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Rage'
+    Name: '&7Enojo'
     MaxPower: 3
     Enchantment-Type: 'Sword'
     Info:
-      Name: '&e&lRage &7(&bI-&bIII&7)'
+      Name: '&e&lEnojo &7(&bI-&bIII&7)'
       Description:
-        - '&7Attacks will get stronger'
-        - '&7as long as you keep fighting.'
+        - '&7Haces más daño mientras'
+        - '&7más dure la batalla.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSwords'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
-    Valor:
-      Enabled: true
-      Sound: "ENTITY_PLAYER_LEVELUP"
-      Name: '&7Valor'
-      MaxPower: 2
-      Enchantment-Type: 'Armor'
-      Cooldown: 5
-      Info:
-        Name: '&e&lValor &7(&bI-&bII&7)'
-        Description:
-          - '&7Gives damage resistance'
-          - '&7for 10 seconds when hit.'
+  Valor:
+    Enabled: true
+    Sound: "ENTITY_PLAYER_LEVELUP"
+    Name: '&7Valor'
+    MaxPower: 2
+    Enchantment-Type: 'Armor'
+    Cooldown: 10
+    Chance-System:
+      Base: 5
+      Increase: 5
+    Info:
+      Name: '&e&lValor &7(&bI-&bII&7)'
+      Description:
+        - '&7Tienes una probabilidad de'
+        - '&7obtener resistencia al ser golpeado.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   SmokeBomb:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7SmokeBomb'
     MaxPower: 3
@@ -1469,18 +1478,18 @@ Enchantments:
         - '&7Has a chance to blind and'
         - '&7slow your enemy so you can escape.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Drunk:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Drunk'
     MaxPower: 3
@@ -1491,18 +1500,18 @@ Enchantments:
         - '&7Gives strength, mining fatigue,'
         - '&7and slowness when put on.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Voodoo:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Voodoo'
     MaxPower: 3
@@ -1516,11 +1525,11 @@ Enchantments:
         - '&7Has a chance to give'
         - '&7your enemy weakness.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1529,69 +1538,65 @@ Enchantments:
   MultiArrow:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7MultiArrow'
-    MaxPower: 4
-      Enchantment-Type: 'Bow'
+    Name: '&7Multiplicación'
+    MaxPower: 5
+    Enchantment-Type: 'Bow'
     Chance-System:
-        Base: 25
-        Increase: 10
+        Base: 30
+        Increase: 5
     Arrow-Chances:
         # Chance (percent) for each extra arrow in order (1 = 2 arrows total, 2 = 3 arrows total, etc.)
         1:
           Base: 20
-          Increase: 5
+          Increase: 10
         2:
+          Base: 15
+          Increase: 5
+        3:
           Base: 10
           Increase: 3
-        3:
-          Base: 6
-          Increase: 2
         4:
-          Base: 3
-          Increase: 1
+          Base: 7
+          Increase: 2
         5:
-          Base: 1
+          Base: 5
           Increase: 1
     Info:
-        Name: '&e&lMultiArrow &7(&bI-&bV&7)'
-        Description:
-        - '&7Has a chance to shoot'
-        - '&7multiple arrows at once.'
+      Name: '&e&lMultiplicación &7(&bI-&bV&7)'
+      Description:
+        - '&7Tienes una probabilidad de'
+        - '&7disparar varias flechas en simultaneo.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aArcos'
     Categories:
-      - 'Common'
-      - 'Rare'
-      - 'Legendary'
+      - 'Mythical'
   #Do not change this line.
   Recover:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Recover'
+    Name: '&7Recuperación'
     MaxPower: 1
     Enchantment-Type: 'Armor'
     Info:
-      Name: '&e&lRecover &7(&bI&7)'
+      Name: '&e&lRecuperación &7(&bI&7)'
       Description:
-        - '&7When you kill a player'
-        - '&7you get absorption and regen.'
+        - '&7Obtienes absorción y regeneración'
+        - '&7al matar a un jugador.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Cactus:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Cactus'
     MaxPower: 3
@@ -1605,11 +1610,11 @@ Enchantments:
         - '&7Has a chance to damage'
         - '&7the player that hits you.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1618,23 +1623,23 @@ Enchantments:
   Rocket:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Rocket'
+    Name: '&7Cohete'
     MaxPower: 3
     Enchantment-Type: 'Boots'
     Chance-System:
       Base: 15
       Increase: 5
     Info:
-      Name: '&e&lRocket &7(&bI-&bIII&7)'
+      Name: '&e&lCohete &7(&bI-&bIII&7)'
       Description:
-        - '&7If low on health there is a chance'
-        - '&7you will blast off backwards to escape.'
+        - '&7Cuando tienes poca vida, hay una probabilidad'
+        - '&7de salir disparado para atras.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBoots'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aBotas'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1643,26 +1648,26 @@ Enchantments:
   Adrenaline:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Adrenaline'
+    Name: '&7Adrenalina'
     MaxPower: 3
     Enchantment-Type: 'Boots'
     Chance-System:
       Base: 15
       Increase: 5
     Info:
-      Name: '&e&lAdrenaline &7(&bI-&bIII&7)'
+      Name: '&e&lAdrenalina &7(&bI-&bIII&7)'
       Description:
-        - '&7If low on health there is a chance'
-        - '&7you will gain a speed boost.'
+        - '&7Al tener poca vida tienes una probabilidad'
+        - '&7de obtener un boost de velocidad.'
         - ''
-        - '&6Found in:'
-        - '&7 - &5&l&nMythical'
-        - '&6Enchantable Items: &aBoots'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aBotas'
     Categories:
       - 'Mythical'
   #Do not change this line.
   Angel:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Angel'
     MaxPower: 5
@@ -1673,18 +1678,18 @@ Enchantments:
         - '&7Heals nearby faction members'
         - '&7when you are wearing item.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   HellForged:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7HellForged'
     MaxPower: 4
@@ -1698,18 +1703,18 @@ Enchantments:
         - '&7Has a chance to fix up'
         - '&7your items as you walk.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor, Weapons, Tools, Fishing Rods, and Shears'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmaduras, Armas, Herramientas, Cañas de Pescar, and Tijeras'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Commander:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Commander'
     MaxPower: 5
@@ -1720,43 +1725,39 @@ Enchantments:
         - '&7Gives nearby faction members'
         - '&7haste when wearing it.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aHelmets'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aCascos'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   StormCaller:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7StormCaller'
-    MaxPower: 5
+    Name: '&7Hijo de la Tormenta'
+    MaxPower: 1
     Enchantment-Type: 'Armor'
     Chance-System:
-      Base: 10
-      Increase: 5
+      Base: 3
+      Increase: 0
     Info:
-      Name: '&e&lStormCaller &7(&bI-&bV&7)'
+      Name: '&e&lHijo de la Tormenta &7(&bI&7)'
       Description:
-        - '&7Has a chance to strike your enemy'
-        - '&7down with a lightning strike.'
+        - '&7Tienes la probabilidad de atraer'
+        - '&7un rayo cuando te pegan.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aArmadura'
     Categories:
-      - 'Common'
-      - 'Rare'
-      - 'Legendary'
+      - 'Mythical'
   #Do not change this line.
   Leadership:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Leadership'
     MaxPower: 5
@@ -1767,18 +1768,18 @@ Enchantments:
         - '&7Your attacks are stronger when'
         - '&7you have allies around you.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Implants:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Implants'
     MaxPower: 5
@@ -1792,18 +1793,18 @@ Enchantments:
         - '&7While moving your hunger will'
         - '&7start to go up while equipped.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aHelmets'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aCascos'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Wings:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Wings'
     MaxPower: 1
@@ -1814,18 +1815,18 @@ Enchantments:
         - '&7Allows you to fly in your'
         - '&7own territory.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBoots'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aBotas'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   VeinMiner:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7VeinMiner'
     MaxPower: 6
@@ -1837,16 +1838,16 @@ Enchantments:
         - '&7The higher the level, the more'
         - '&7connected blocks it can break.'
         - ''
-        - '&6Found in:'
-        - '&7 - &5&l&nMythical'
-        - '&6Enchantable Items: &aPickaxes'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aPicos'
     Categories:
       - 'Mythical'
     Conflicts:
       - "Blast"
   #Do not change this line.
   Blast:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Blast'
     MaxPower: 3
@@ -1857,11 +1858,11 @@ Enchantments:
         - '&7Breaks blocks in a 3 x level x 3 radius' #Level increases depth not size. Size remains 3x3 (9 blocks)
         - '&7depending on the power of the enchantment.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aPickaxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aPicos'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1872,27 +1873,26 @@ Enchantments:
   Furnace:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Furnace'
+    Name: '&7Horno'
     MaxPower: 1
     Enchantment-Type: 'PickAxe'
     Info:
-      Name: '&e&lFurnace &7(&bI&7)'
+      Name: '&e&lHorno &7(&bI&7)'
       Description:
-        - '&7Always smelts ores into'
-        - '&7items instead of blocks.'
+        - '&7Cocina los ores que minas'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aPickaxes'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aPicos'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Blizzard:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Blizzard'
     MaxPower: 1
@@ -1903,18 +1903,18 @@ Enchantments:
         - '&7Gives enemies within 3'
         - '&7blocks slowness for a short time.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   AcidRain:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7AcidRain'
     MaxPower: 3
@@ -1925,18 +1925,18 @@ Enchantments:
         - '&7Gives enemies within 3'
         - '&7blocks poison for a short time.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   SandStorm:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7SandStorm'
     MaxPower: 1
@@ -1947,18 +1947,18 @@ Enchantments:
         - '&7Gives enemies within 3'
         - '&7blocks blindness for a short time.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Radiant:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Radiant'
     MaxPower: 3
@@ -1969,18 +1969,18 @@ Enchantments:
         - '&7Sets enemies within 3'
         - '&7blocks on fire for a short time.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Intimidate:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Intimidate'
     MaxPower: 2
@@ -1991,11 +1991,11 @@ Enchantments:
         - '&7Gives enemies within 3'
         - '&7blocks weakness for a short time.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -2004,30 +2004,30 @@ Enchantments:
   Pull:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Pull'
+    Name: '&7Gancho'
     MaxPower: 3
     Enchantment-Type: 'Bow'
     Chance-System:
-      Base: 25
-      Increase: 10
+      Base: 3.3
+      Increase: 3.3
     Info:
-      Name: '&e&lPull &7(&bI-&bIII&7)'
+      Name: '&e&lGancho &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to send'
-        - '&7the enemy you hit flying at you.'
+        - '&7Tienes una probabilidad de'
+        - '&7atraer a tu enemigo.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBows'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArcos'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Tamer:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Tamer'
     MaxPower: 5
@@ -2038,18 +2038,18 @@ Enchantments:
         - '&7Spawns wolves to help'
         - '&7when you are in trouble.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Guards:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Guards'
     MaxPower: 3
@@ -2060,18 +2060,18 @@ Enchantments:
         - '&7Spawns in iron golems'
         - '&7when you are in trouble.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Infestation:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Infestation'
     MaxPower: 2
@@ -2082,18 +2082,18 @@ Enchantments:
         - '&7Spawns in endermites and silverfish'
         - '&7when you are in trouble.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Necromancer:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Necromancer'
     MaxPower: 3
@@ -2104,11 +2104,11 @@ Enchantments:
         - '&7Spawns in zombies'
         - '&7when you are in trouble.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -2117,20 +2117,20 @@ Enchantments:
   BeeKeeper:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7BeeKeeper'
+    Name: '&7Apicultor'
     MaxPower: 2
     Enchantment-Type: 'Armor'
     Info:
-      Name: '&e&lBeeKeeper &7(&bI-&bII&7)'
+      Name: '&e&lApicultor &7(&bI-&bII&7)'
       Description:
-        - '&7Spawns in bees'
-        - '&7when you are in trouble.'
+        - '&7Invoca abejas cuando'
+        - '&7estas en problemas.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Common'
       - 'Rare'
@@ -2139,64 +2139,70 @@ Enchantments:
   Maneuver:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Maneuver'
-    MaxPower: 3
-    Enchantment-Type: 'Armor'
+    Name: '&7Agil'
+    MaxPower: 1
+    Enchantment-Type: 'Boots'
+    Chance-System:
+      Base: 2
+      Increase: 0
     Info:
-      Name: '&e&lManeuver &7(&bI-&bIII&7)'
+      Name: '&e&lAgil &7(&bI-&bIII&7)'
       Description:
-        - '&7Chance to dodge'
-        - '&7an attack.'
+        - '&7Tienes una probabilidad de'
+        - '&7esquivar un ataque.'
         - ''
-        - '&6Found in:'
-        - '&7 - &5&l&nMythical'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aBotas'
     Categories:
       - 'Mythical'
   #Do not change this line.
   Crouch:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Crouch'
-    MaxPower: 3
+    Name: '&7Agachado'
+    MaxPower: 1
     Enchantment-Type: 'Armor'
     Chance-System:
       Base: 10
-      Increase: 5
+      Increase: 0
     Info:
-      Name: '&e&lCrouch &7(&bI-III&7)'
+      Name: '&e&lAgachado &7(&bI&7)'
       Description:
-        - '&7During combat you take'
-        - '&610%(+5% per level) &7less'
-        - '&7damage while crouched.'
+        - '&7Durante un combate recibes'
+        - '&610% &7menos daño'
+        - '&7mientras estes agachado.'
         - ''
-        - '&6Found in:'
-        - '&7 - &5&l&nMythical'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Mythical'
   #Do not change this line.
   Shockwave:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Shockwave'
+    Name: '&7Redireccionamiento'
     MaxPower: 3
     Enchantment-Type: 'Armor'
+    Chance-System:
+      Base: 1
+      Increase: 1
     Info:
-      Name: '&e&lShockwave &7(&bI-&bIII&7)'
+      Name: '&e&lRedireccionamiento &7(&bI-&bIII&7)'
       Description:
-        - '&7Chance to knockback'
-        - '&7enemies when they'
-        - '&7attack you.'
+        - '&7Tienes una probabilidad de'
+        - '&7empujar a tus enemigos cuando'
+        - '&7te atacan.'
         - ''
-        - '&6Found in:'
-        - '&7 - &5&l&nMythical'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Mythical'
   #Do not change this line.
   SystemReboot:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7SystemReboot'
     MaxPower: 3
@@ -2208,32 +2214,34 @@ Enchantments:
         - '&7full hp when'
         - '&7attacked at low hp.'
         - ''
-        - '&6Found in:'
-        - '&7 - &5&l&nMythical'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Mythical'
   #Do not change this line.
   Sticky-Shot:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7StickyShot'
+    Name: '&7Pegajoso'
     MaxPower: 3
     Enchantment-Type: 'Bow'
+    Cooldown: 3
     Chance-System:
-      Base: 10
-      Increase: 10
+      Base: 2
+      Increase: 2
     Info:
-      Name: '&e&lStickyShot &7(&bI-&bIII&7)'
+      Name: '&e&lPegajoso &7(&bI-&bIII&7)'
       Description:
-        - '&7Has a chance to spawn'
-        - '&7a web where the arrow lands.'
+        - '&7Tienes una probabilidad de'
+        - '&7lanzar una telaraña a donde'
+        - '&7caiga tu flecha'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&7 - &9&l&nRare'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBow'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&7 - &9&l&nRaro'
+        - '&7 - &4&l&nLegendario'
+        - '&6Enchantable Items: &aArcos'
     Categories:
       - 'Common'
       - 'Rare'
@@ -2242,26 +2250,26 @@ Enchantments:
   Disorder:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7Disorder'
+    Name: '&7Desorden'
     MaxPower: 1
     Enchantment-Type: 'Sword'
     Chance-System:
       Base: 1
       Increase: 1
     Info:
-      Name: '&e&lDisorder &7(&bI&7)'
+      Name: '&e&lDesorden &7(&bI&7)'
       Description:
-        - '&7Has a chance to reorder'
-        - '&7your enemies hot-bar.'
+        - '&7Tienes una probabilidad de'
+        - '&7reordenar la hot-bar de tu enemigo'
         - ''
-        - '&6Found in:'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aSword'
+        - '&6Se encuentra en:'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Legendary'
   #Do not change this line.
   Charge:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Charge'
     MaxPower: 5
@@ -2272,14 +2280,14 @@ Enchantments:
         - '&7When you kill an enemy player'
         - '&7nearby allies and you gain a speed boost.'
         - ''
-        - '&6Found in:'
-        - '&7 - &9&l&nRare'
-        - '&6Enchantable Items: &aSword'
+        - '&6Se encuentra en:'
+        - '&7 - &9&l&nRaro'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Rare'
   #Do not change this line.
   Revenge:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Revenge'
     MaxPower: 1
@@ -2291,21 +2299,21 @@ Enchantments:
         - '&7killed you receive speed,'
         - '&7regeneration, and haste.'
         - ''
-        - '&6Found in:'
-        - '&7 - &9&l&nRare'
-        - '&6Enchantable Items: &aSword'
+        - '&6Se encuentra en:'
+        - '&7 - &9&l&nRaro'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Rare'
   #Do not change this line.
   BattleCry:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7BattleCry'
     MaxPower: 5
     Enchantment-Type: 'Axe'
     Chance-System:
       Base: 10
-      Increase: 5
+      Increase: 0
     Info:
       Name: '&e&lBattleCry &7(&bI-V&7)'
       Description:
@@ -2313,35 +2321,35 @@ Enchantments:
         - '&610%(+5% per level) &7chance to send'
         - '&7nearby players flying backwards.'
         - ''
-        - '&6Found in:'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aAxe'
+        - '&6Se encuentra en:'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Legendary'
   DemonForged:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
-    Name: '&7DemonForged'
-    MaxPower: 5
+    Name: '&7Potente'
+    MaxPower: 3
     Enchantment-Type: 'Axe'
     Chance-System:
       Base: 10
       Increase: 5
     Info:
-      Name: '&e&lDemonForged &7(&bI-V&7)'
+      Name: '&e&lPotente &7(&bI-III&7)'
       Description:
-        - '&7During combat it has a'
-        - '&610%(+5% per level) &7chance to deal'
-        - '&7more durability damage.'
+        - '&7Durante el combate, tiene una probabilidad '
+        - '&7de &610%(+5% por nivel) &7de hacer'
+        - '&7 más daño de durabilidad.'
         - ''
-        - '&6Found in:'
-        - '&7 - &5&l&nMythical'
-        - '&6Enchantable Items: &aAxe'
+        - '&6Se encuentra en:'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aHachas'
     Categories:
       - 'Mythical'
   #Do not change this line.
   Famished:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Famished'
     MaxPower: 3
@@ -2356,14 +2364,14 @@ Enchantments:
         - '&610%(+5% per level) &7chance'
         - '&7to give the enemy hunger.'
         - ''
-        - '&6Found in:'
-        - '&7 - &9&l&nRare'
-        - '&6Enchantable Items: &aSword'
+        - '&6Se encuentra en:'
+        - '&7 - &9&l&nRaro'
+        - '&6Items Encantables: &aEspadas'
     Categories:
       - 'Rare'
   #Do not change this line.
   GreenThumb:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7GreenThumb'
     MaxPower: 3
@@ -2379,14 +2387,14 @@ Enchantments:
         - '&7to fully grow the plant but at the cost'
         - '&7of the hoe''s durability.'
         - ''
-        - '&6Found in:'
-        - '&7 - &9&l&nRare'
-        - '&6Enchantable Items: &aHoe'
+        - '&6Se encuentra en:'
+        - '&7 - &9&l&nRaro'
+        - '&6Items Encantables: &aAzada'
     Categories:
       - 'Rare'
   #Do not change this line.
   Harvester:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Harvester'
     MaxPower: 1
@@ -2398,14 +2406,14 @@ Enchantments:
         - '&7it will break all fully grown crops'
         - '&7in a 3x3 area of the broken crop.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&6Enchantable Items: &aHoe'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&6Items Encantables: &aAzada'
     Categories:
       - 'Common'
   #Do not change this line.
   Tiller:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Tiller'
     MaxPower: 1
@@ -2420,14 +2428,14 @@ Enchantments:
         - '&7the soil if it is 4 blocks away from'
         - '&7a water source block.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&6Enchantable Items: &aHoe'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&6Items Encantables: &aAzada'
     Categories:
       - 'Common'
   #Do not change this line.
   Planter:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Planter'
     MaxPower: 1
@@ -2441,14 +2449,14 @@ Enchantments:
         - '&7in your hot-bar going from the'
         - '&7right side to the left side.'
         - ''
-        - '&6Found in:'
-        - '&7 - &a&l&nCommon'
-        - '&6Enchantable Items: &aHoe'
+        - '&6Se encuentra en:'
+        - '&7 - &a&l&nComún'
+        - '&6Items Encantables: &aAzada'
     Categories:
       - 'Common'
   #Do not change this line.
   Cyborg:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Cyborg'
     MaxPower: 1
@@ -2459,14 +2467,14 @@ Enchantments:
         - '&7Gives you speed, strength and'
         - '&7jump boost to take down your enemies.'
         - ''
-        - '&6Found in:'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aArmor'
+        - '&6Se encuentra en:'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArmadura'
     Categories:
       - 'Legendary'
   #Do not change this line.
   Sniper:
-    Enabled: true
+    Enabled: false
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Sniper'
     MaxPower: 2
@@ -2481,8 +2489,8 @@ Enchantments:
         - '&7it will have a high chance of'
         - '&7doing high poison damage.'
         - ''
-        - '&6Found in:'
-        - '&7 - &4&l&nLegendary'
-        - '&6Enchantable Items: &aBow'
+        - '&6Se encuentra en:'
+        - '&7 - &4&l&nLegendario'
+        - '&6Items Encantables: &aArcos'
     Categories:
       - 'Legendary'
