@@ -221,6 +221,16 @@ Types:
       - 'DIAMOND_HOE'
       - 'NETHERITE_HOE'
       - 'SHEARS'
+  FishingRod:
+    Display-Item:
+      Item: 'FISHING_ROD'
+      Slot: 10
+      Name: '&e&lFishing Rod Enchantments'
+      Lore:
+        - '&7Enchantable Items:'
+        - '&a- Fishing Rod'
+    Enchantable-Items:
+      - 'FISHING_ROD'
   Damaged-Items:
     Display-Item:
       Item: 'DAMAGED_ANVIL'

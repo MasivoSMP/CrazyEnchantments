@@ -347,6 +347,7 @@ public class FileManager {
         // ENUM_NAME("fileName.yml", "newFileLocation.yml", "oldFileLocation.yml"),
         CONFIG("config.yml", "config.yml"),
         BLOCKLIST("BlockList.yml", "BlockList.yml"),
+        TREASURE_HUNT("TreasureHunt.yml", "TreasureHunt.yml"),
         HEADMAP("HeadMap.yml", "HeadMap.yml"),
         DATA("Data.yml", "Data.yml"),
         ENCHANTMENTS("Enchantments.yml", "Enchantments.yml"),

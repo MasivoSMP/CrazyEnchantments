@@ -115,6 +115,7 @@ public class CrazyManager {
     private final List<CEPlayer> players = new ArrayList<>();
     private final List<Material> blockList = new ArrayList<>();
     private final Map<Material, Double> headMap = new HashMap<>();
+    private final Map<Material, Map<Integer, Double>> treasureHuntItemPool = new HashMap<>();
 
     private int rageMaxLevel;
     private boolean gkitzToggle;
@@ -147,9 +148,11 @@ public class CrazyManager {
 
         FileConfiguration blocks = Files.BLOCKLIST.getFile();
         FileConfiguration heads = Files.HEADMAP.getFile();
+        FileConfiguration treasureHunt = Files.TREASURE_HUNT.getFile();
 
         this.blockList.clear();
         this.headMap.clear();
+        this.treasureHuntItemPool.clear();
         this.gkitz.clear();
         this.enchantmentBookSettings.getRegisteredEnchantments().clear();
         this.enchantmentBookSettings.getCategories().clear();
@@ -198,6 +201,35 @@ public class CrazyManager {
                     Material mat = new ItemBuilder().setMaterial(id).getMaterial();
                     this.headMap.put(mat, headSec.getDouble(id));
                 } catch (Exception ignored) {}
+            });
+        }
+
+        ConfigurationSection treasurePool = treasureHunt.getConfigurationSection("Item-Pool");
+
+        if (treasurePool == null) {
+            this.fusion.log("warn", "Item-Pool could not be found in TreasureHunt.yml!");
+        } else {
+            treasurePool.getKeys(false).forEach(id -> {
+                Material material = Material.matchMaterial(id);
+                if (material == null) return;
+
+                ConfigurationSection itemSection = treasurePool.getConfigurationSection(id);
+                if (itemSection == null) return;
+
+                Map<Integer, Double> levelChances = new HashMap<>();
+
+                for (String key : itemSection.getKeys(false)) {
+                    String lowerKey = key.toLowerCase();
+                    if (!lowerKey.startsWith("level-")) continue;
+
+                    String levelKey = key.substring("level-".length());
+                    if (!NumberUtils.isInt(levelKey)) continue;
+
+                    int level = Integer.parseInt(levelKey);
+                    levelChances.put(level, itemSection.getDouble(key));
+                }
+
+                if (!levelChances.isEmpty()) this.treasureHuntItemPool.put(material, levelChances);
             });
         }
 
@@ -836,6 +868,13 @@ public class CrazyManager {
      */
     public Map<Material, Double> getDecapitationHeadMap() {
         return this.headMap;
+    }
+
+    /**
+     * @return The item pool for treasure hunt.
+     */
+    public Map<Material, Map<Integer, Double>> getTreasureHuntItemPool() {
+        return this.treasureHuntItemPool;
     }
 
     /**

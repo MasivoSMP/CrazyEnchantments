@@ -120,6 +120,9 @@ public enum CEnchantments {
     HASTE("Haste", "Tool"),
     TELEPATHY("Telepathy", "Tool"),
     OXYGENATE("Oxygenate", "Tool"),
+    //	----------------Fishing Rods----------------  \\
+    TREASUREHUNT("TreasureHunt", "FishingRod"),
+    MULTILINE("MultiLine", "FishingRod"),
     //	----------------Hoes----------------  \\
     GREENTHUMB("GreenThumb", "Hoe", 10, 10),
     HARVESTER("Harvester", "Hoe"),

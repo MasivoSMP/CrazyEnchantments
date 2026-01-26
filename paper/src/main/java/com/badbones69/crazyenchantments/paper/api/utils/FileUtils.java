@@ -46,6 +46,7 @@ public class FileUtils {
                 "GKitz.yml",
                 "HeadMap.yml",
                 "Messages.yml",
+                "TreasureHunt.yml",
                 "Tinker.yml"
         ).forEach(name -> copyFile(file.toPath(), name));
     }

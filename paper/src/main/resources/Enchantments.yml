@@ -2494,3 +2494,39 @@ Enchantments:
         - '&6Items Encantables: &aArcos'
     Categories:
       - 'Legendary'
+  #Do not change this line.
+  TreasureHunt:
+    Enabled: true
+    Sound: "ENTITY_PLAYER_LEVELUP"
+    Name: '&7Treasure Hunt'
+    MaxPower: 3
+    Enchantment-Type: 'FishingRod'
+    Info:
+      Name: '&e&lTreasure Hunt &7(&bI-&bIII&7)'
+      Description:
+        - '&7Gives a chance to fish'
+        - '&7an item from the treasure pool.'
+        - ''
+        - '&6Se encuentra en:'
+        - '&7 - &9&l&nRaro'
+        - '&6Items Encantables: &aFishing Rod'
+    Categories:
+      - 'Rare'
+  #Do not change this line.
+  MultiLine:
+    Enabled: true
+    Sound: "ENTITY_PLAYER_LEVELUP"
+    Name: '&7Multi Line'
+    MaxPower: 2
+    Enchantment-Type: 'FishingRod'
+    Info:
+      Name: '&e&lMulti Line &7(&bI-&bII&7)'
+      Description:
+        - '&7Adds an extra line per level'
+        - '&7so you can fish more at once.'
+        - ''
+        - '&6Se encuentra en:'
+        - '&7 - &9&l&nRaro'
+        - '&6Items Encantables: &aFishing Rod'
+    Categories:
+      - 'Rare'

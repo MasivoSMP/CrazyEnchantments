@@ -370,3 +370,9 @@ Tinker:
     Planter:
       Items: '20, 1'
       Book: '5, 1'
+    TreasureHunt:
+      Items: '20, 1'
+      Book: '5, 1'
+    MultiLine:
+      Items: '20, 1'
+      Book: '5, 1'
