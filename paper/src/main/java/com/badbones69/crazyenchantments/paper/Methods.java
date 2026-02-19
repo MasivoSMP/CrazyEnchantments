@@ -356,6 +356,10 @@ public class Methods {
     }
 
     public void explode(@NotNull Entity player) {
+        explode(player, 5D);
+    }
+
+    public void explode(@NotNull Entity player, double damage) {
         spawnExplodeParticles(player.getWorld(), player.getLocation());
 
         for (Entity entity : getNearbyEntities(3D, player)) {
@@ -368,7 +372,7 @@ public class Methods {
                 if (!(entity instanceof LivingEntity en)) continue;
                 if (this.pluginSupport.isFriendly(player, en)) continue;
                 if (player.getName().equalsIgnoreCase(entity.getName())) continue;
-                en.damage(5D);
+                en.damage(damage);
 
                 en.setVelocity(en.getLocation().toVector().subtract(player.getLocation().toVector()).normalize().multiply(1).setY(.5));
             }

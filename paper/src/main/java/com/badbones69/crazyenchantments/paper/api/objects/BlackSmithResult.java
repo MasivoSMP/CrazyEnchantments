@@ -88,7 +88,9 @@ public class BlackSmithResult {
                 for (Entry<Enchantment, Integer> entry : compare.getNewVanillaEnchantments().entrySet()) {
                     Enchantment enchantment = entry.getKey();
 
-                    if (enchantment.canEnchantItem(subItem) && mainCE.canAddEnchantment(player) && !hasConflictingEnchant(mainCE.getVanillaEnchantments().keySet(), enchantment)) {
+                    if (enchantment.canEnchantItem(subItem)
+                            && mainCE.canAddEnchantment(player)
+                            && !hasConflictingEnchant(mainCE.getVanillaEnchantments().keySet(), mainCE.getCEnchantments().keySet(), enchantment)) {
                         mainCE.addVanillaEnchantment(enchantment, entry.getValue());
                         this.cost += BlackSmithManager.getAddEnchantment();
                     }
@@ -97,7 +99,9 @@ public class BlackSmithResult {
                 for (Entry<CEnchantment, Integer> entry : compare.getNewCEnchantments().entrySet()) {
                     CEnchantment enchantment = entry.getKey();
 
-                    if (enchantment.canEnchantItem(mainItem) && mainCE.canAddEnchantment(player) && !hasConflictingCEEnchant(mainCE.getCEnchantments().keySet(), enchantment)) {
+                    if (enchantment.canEnchantItem(mainItem)
+                            && mainCE.canAddEnchantment(player)
+                            && !hasConflictingCEEnchant(mainCE.getCEnchantments().keySet(), mainCE.getVanillaEnchantments().keySet(), enchantment)) {
                         mainCE.addCEnchantment(enchantment, entry.getValue());
                         this.cost += BlackSmithManager.getAddEnchantment();
                     }
@@ -112,13 +116,18 @@ public class BlackSmithResult {
      * Check if this enchantment conflicts with another enchantment.
      *
      * @param vanillaEnchantments The enchants to check if they are conflicting.
+     * @param ceEnchantments The custom enchants to check if they are conflicting.
      * @param enchantment The enchant to check the others against.
      * @return True if there is a conflict.
      */
-    private boolean hasConflictingEnchant(Set<Enchantment> vanillaEnchantments, Enchantment enchantment) {
+    private boolean hasConflictingEnchant(Set<Enchantment> vanillaEnchantments, Set<CEnchantment> ceEnchantments, Enchantment enchantment) {
 
         for (Enchantment enchant : vanillaEnchantments) {
-            if (enchantment.conflictsWith(enchant)) return true;
+            if (enchantment.conflictsWith(enchant) || enchant.conflictsWith(enchantment)) return true;
+        }
+
+        for (CEnchantment cEnchant : ceEnchantments) {
+            if (cEnchant.conflictsWith(enchantment)) return true;
         }
 
         return false;
@@ -127,12 +136,17 @@ public class BlackSmithResult {
      * Check if this enchantment conflicts with another enchantment.
      *
      * @param ceEnchantments The ceEnchants to check if they are conflicting.
+     * @param vanillaEnchantments The vanilla/custom Bukkit enchants on the item.
      * @param cEnchantment The ceEnchant to check the others against.
      * @return True if there is a conflict.
      */
-    private boolean hasConflictingCEEnchant(Set<CEnchantment> ceEnchantments, CEnchantment cEnchantment) {
+    private boolean hasConflictingCEEnchant(Set<CEnchantment> ceEnchantments, Set<Enchantment> vanillaEnchantments, CEnchantment cEnchantment) {
 
         for (CEnchantment enchant : ceEnchantments) {
+            if (cEnchantment.conflictsWith(enchant) || enchant.conflictsWith(cEnchantment)) return true;
+        }
+
+        for (Enchantment enchant : vanillaEnchantments) {
             if (cEnchantment.conflictsWith(enchant)) return true;
         }
 

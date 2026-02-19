@@ -2,6 +2,8 @@
 # - Armor ~ All armor
 # - Helmet
 # - Boots
+# - Chestplate
+# - Leggings
 # - Bow
 # - Axe
 # - Sword
@@ -15,6 +17,10 @@
 # Chance-System:
 #   Base: # Starting chance.
 #   Increase: # The amount it goes up each level.
+# Multi-Type (optional, overrides Enchantment-Type):
+# Enchantment-Types:
+#   - 'Sword'
+#   - 'Axe'
 ##########
 Enchantments:
   #Do not change this line.
@@ -27,6 +33,7 @@ Enchantments:
     #Max lvl the enchantment goes up to.
     MaxPower: 1
     #The type of items that can be enchanted with the enchantment.
+    #You can also use Enchantment-Types: ['Sword', 'Axe'] for multiple.
     Enchantment-Type: 'Helmet'
     #Info for the enchantment
     Info:
@@ -47,7 +54,9 @@ Enchantments:
       - 'Common'
       - 'Rare'
       - 'Legendary'
-    # List of cEnchants that can't be added to the item if this one is on it.
+    # List of enchants that can't be added to the item if this one is on it.
+    # Supports CE names (e.g. "VeinMiner"), vanilla names (e.g. "sharpness"),
+    # and namespaced keys from other plugins/datapacks (e.g. "myplugin:poison").
     Conflicts: []
   #Do not change this line.
   BurnShield:
@@ -103,6 +112,12 @@ Enchantments:
     Name: '&b&lSobrecarga'
     MaxPower: 5
     Enchantment-Type: 'Armor'
+    Strength:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
     Info:
       Name: '&e&lSobrecarga &7(&bI-&bV&7)'
       Description:
@@ -125,6 +140,12 @@ Enchantments:
     Name: '&7Autodestrucción'
     MaxPower: 5
     Enchantment-Type: 'Armor'
+    Strength:
+      - 6
+      - 8
+      - 10
+      - 12
+      - 14
     Info:
       Name: '&e&lAutodestrucción &7(&bI-&bV&7)'
       Description:
@@ -585,6 +606,12 @@ Enchantments:
     Chance-System:
       Base: 10
       Increase: 5
+    Strength:
+      - 2
+      - 4
+      - 6
+      - 8
+      - 10
     Info:
       Name: '&e&lNutritivo &7(&bI-&bV&7)'
       Description:
@@ -734,6 +761,10 @@ Enchantments:
     Chance-System:
       Base: 0.5
       Increase: 0.5
+    Strength:
+      - 1
+      - 2
+      - 3
     Info:
       Name: '&e&lBendito &7(&bI-&bV&7)'
       Description:

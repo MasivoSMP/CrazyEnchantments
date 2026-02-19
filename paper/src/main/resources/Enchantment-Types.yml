@@ -93,6 +93,46 @@ Types:
       - 'IRON_BOOTS'
       - 'DIAMOND_BOOTS'
       - 'NETHERITE_BOOTS'
+  Chestplate:
+    Display-Item:
+      Item: 'GOLDEN_CHESTPLATE'
+      Slot: 11
+      Name: '&e&lChestplate Enchantments'
+      Lore:
+        - '&7Enchantable Items:'
+        - '&a- Leather Chestplate'
+        - '&a- Chain Chestplate'
+        - '&a- Gold Chestplate'
+        - '&a- Iron Chestplate'
+        - '&a- Diamond Chestplate'
+        - '&a- Netherite Chestplate'
+    Enchantable-Items:
+      - 'LEATHER_CHESTPLATE'
+      - 'CHAINMAIL_CHESTPLATE'
+      - 'GOLDEN_CHESTPLATE'
+      - 'IRON_CHESTPLATE'
+      - 'DIAMOND_CHESTPLATE'
+      - 'NETHERITE_CHESTPLATE'
+  Leggings:
+    Display-Item:
+      Item: 'GOLDEN_LEGGINGS'
+      Slot: 12
+      Name: '&e&lLeggings Enchantments'
+      Lore:
+        - '&7Enchantable Items:'
+        - '&a- Leather Leggings'
+        - '&a- Chain Leggings'
+        - '&a- Gold Leggings'
+        - '&a- Iron Leggings'
+        - '&a- Diamond Leggings'
+        - '&a- Netherite Leggings'
+    Enchantable-Items:
+      - 'LEATHER_LEGGINGS'
+      - 'CHAINMAIL_LEGGINGS'
+      - 'GOLDEN_LEGGINGS'
+      - 'IRON_LEGGINGS'
+      - 'DIAMOND_LEGGINGS'
+      - 'NETHERITE_LEGGINGS'
   Bow:
     Display-Item:
       Item: 'BOW'

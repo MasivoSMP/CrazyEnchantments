@@ -169,11 +169,15 @@ public class ArmorEnchantments implements Listener {
         Map<CEnchantments, HashMap<PotionEffectType, Integer>> enchantmentPotions = this.crazyManager.getEnchantmentPotions();
         HashMap<PotionEffectType, Integer> topPotions = new HashMap<>();
 
-        topEnchants.forEach((key, value) -> enchantmentPotions.entrySet()
+        topEnchants.forEach((key, value) -> {
+            int strength = (int) Math.round(key.getStrengthAtLevel(value, value));
+
+            enchantmentPotions.entrySet()
                 .stream().filter(enchantedPotion -> enchantedPotion.getKey().getEnchantment().equals(key))
                 .forEach(enchantedPotion -> enchantedPotion.getValue().entrySet().stream()
                         .filter(pot -> !topPotions.containsKey(pot.getKey()) || (topPotions.get(pot.getKey()) != -1 && topPotions.get(pot.getKey()) <= pot.getValue()))
-                        .forEach(pot -> topPotions.put(pot.getKey(), value))));
+                        .forEach(pot -> topPotions.put(pot.getKey(), strength)));
+        });
 
         return topPotions;
     }
@@ -294,7 +298,8 @@ public class ArmorEnchantments implements Listener {
             }
 
             if (player.getHealth() > 0 && EnchantUtils.isEventActive(CEnchantments.ENLIGHTENED, player, armor, enchants)) {
-                double heal = enchants.get(CEnchantments.ENLIGHTENED.getEnchantment());
+                int level = enchants.get(CEnchantments.ENLIGHTENED.getEnchantment());
+                double heal = CEnchantments.ENLIGHTENED.getEnchantment().getStrengthAtLevel(level, level);
                 // Uses getValue as if the player has health boost it is modifying the base so the value after the modifier is needed.
                 double maxHealth = player.getAttribute(Attribute.MAX_HEALTH).getValue();
 
@@ -404,7 +409,9 @@ public class ArmorEnchantments implements Listener {
             Map<CEnchantment, Integer> enchantments = this.enchantmentBookSettings.getEnchantments(item);
 
             if (EnchantUtils.isEventActive(CEnchantments.SELFDESTRUCT, player, item, enchantments)) {
-                this.methods.explode(player);
+                int level = enchantments.get(CEnchantments.SELFDESTRUCT.getEnchantment());
+                double damage = CEnchantments.SELFDESTRUCT.getEnchantment().getStrengthAtLevel(level, 5D);
+                this.methods.explode(player, damage);
 
                 List<ItemStack> items = event.getDrops().stream().filter(drop -> ProtectionCrystalSettings.isProtected(drop.getPersistentDataContainer()) && this.protectionCrystalSettings.isProtectionSuccessful(player)).toList();
 

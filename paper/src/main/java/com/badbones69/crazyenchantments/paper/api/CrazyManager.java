@@ -19,6 +19,7 @@ import com.badbones69.crazyenchantments.paper.api.objects.CEBook;
 import com.badbones69.crazyenchantments.paper.api.objects.CEPlayer;
 import com.badbones69.crazyenchantments.paper.api.objects.CEnchantment;
 import com.badbones69.crazyenchantments.paper.api.objects.Category;
+import com.badbones69.crazyenchantments.paper.api.objects.enchants.EnchantmentType;
 import com.badbones69.crazyenchantments.paper.api.objects.gkitz.GKitz;
 import com.badbones69.crazyenchantments.paper.api.objects.gkitz.GkitCoolDown;
 import com.badbones69.crazyenchantments.paper.api.builders.ItemBuilder;
@@ -273,9 +274,15 @@ public class CrazyManager {
                 .setChanceIncrease(cEnchantment.getChanceIncrease())
                 .setCooldown(enchants.getInt(path + ".Cooldown"))
                 .setSound(enchants.getString(path + ".Sound"))
-                .setConflicts(enchants.getStringList(path + ".Conflicts"));
+                .setConflicts(enchants.getStringList(path + ".Conflicts"))
+                .setStrengths(getStrengthLevels(enchants, path + ".Strength"));
 
-                if (enchants.contains(path + ".Enchantment-Type")) enchantment.setEnchantmentType(this.methods.getFromName(enchants.getString(path + ".Enchantment-Type")));
+                if (enchants.contains(path + ".Enchantment-Types")) {
+                    List<EnchantmentType> types = getEnchantTypes(enchants.getStringList(path + ".Enchantment-Types"));
+                    if (!types.isEmpty()) enchantment.setEnchantmentTypes(types);
+                } else if (enchants.contains(path + ".Enchantment-Type")) {
+                    enchantment.setEnchantmentType(this.methods.getFromName(enchants.getString(path + ".Enchantment-Type")));
+                }
 
                 if (cEnchantment.hasChanceSystem()) {
                     if (enchants.contains(path + ".Chance-System.Base")) {
@@ -535,6 +542,51 @@ public class CrazyManager {
         }
 
         return null;
+    }
+
+    @NotNull
+    private List<EnchantmentType> getEnchantTypes(@NotNull List<String> typeNames) {
+        List<EnchantmentType> types = new ArrayList<>();
+
+        for (String typeName : typeNames) {
+            EnchantmentType type = this.methods.getFromName(typeName);
+            if (type != null && !types.contains(type)) types.add(type);
+        }
+
+        return types;
+    }
+
+    @NotNull
+    private List<Double> getStrengthLevels(@NotNull FileConfiguration file, @NotNull String path) {
+        List<Double> strengths = new ArrayList<>();
+
+        if (!file.contains(path)) return strengths;
+
+        Object raw = file.get(path);
+        if (raw == null) return strengths;
+
+        if (raw instanceof Number number) {
+            strengths.add(number.doubleValue());
+            return strengths;
+        }
+
+        if (raw instanceof List<?> list) {
+            for (Object value : list) {
+                if (value instanceof Number number) {
+                    strengths.add(number.doubleValue());
+                    continue;
+                }
+
+                if (value instanceof String string) {
+                    try {
+                        strengths.add(Double.parseDouble(string));
+                    } catch (NumberFormatException ignored) {
+                    }
+                }
+            }
+        }
+
+        return strengths;
     }
 
     /**

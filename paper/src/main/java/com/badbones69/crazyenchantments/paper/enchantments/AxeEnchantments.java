@@ -149,7 +149,8 @@ public class AxeEnchantments implements Listener {
         if (EnchantUtils.isEventActive(CEnchantments.BLESSED, damager, item, enchantments)) removeBadPotions(damager);
 
         if (EnchantUtils.isEventActive(CEnchantments.FEEDME, damager, item, enchantments)&& damager.getFoodLevel() < 20) {
-            int food = 2 * enchantments.get(CEnchantments.FEEDME.getEnchantment());
+            int level = enchantments.get(CEnchantments.FEEDME.getEnchantment());
+            int food = (int) Math.round(CEnchantments.FEEDME.getEnchantment().getStrengthAtLevel(level, 2D * level));
 
             if (damager.getFoodLevel() + food < 20) damager.setFoodLevel((int) (damager.getSaturation() + food));
 

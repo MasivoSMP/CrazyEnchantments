@@ -17,6 +17,7 @@ import com.badbones69.crazyenchantments.paper.controllers.settings.EnchantmentBo
 import com.ryderbelserion.fusion.paper.scheduler.FoliaScheduler;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
@@ -148,7 +149,14 @@ public class EnchantmentControl implements Listener {
         }
 
         for (CEnchantment enchant : enchantments.keySet()) {
-            if (enchant.conflictsWith(enchantment)) {
+            if (enchant.conflictsWith(enchantment) || enchantment.conflictsWith(enchant)) {
+                player.sendMessage(Messages.CONFLICTING_ENCHANT.getMessage());
+                return;
+            }
+        }
+
+        for (Enchantment vanillaEnchantment : item.getEnchantments().keySet()) {
+            if (enchantment.conflictsWith(vanillaEnchantment)) {
                 player.sendMessage(Messages.CONFLICTING_ENCHANT.getMessage());
                 return;
             }
