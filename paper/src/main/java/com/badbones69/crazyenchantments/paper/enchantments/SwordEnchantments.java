@@ -4,6 +4,7 @@ import com.badbones69.crazyenchantments.paper.CrazyEnchantments;
 import com.badbones69.crazyenchantments.paper.Methods;
 import com.badbones69.crazyenchantments.paper.Starter;
 import com.badbones69.crazyenchantments.paper.api.CrazyManager;
+import com.badbones69.crazyenchantments.paper.api.FileManager.Files;
 import com.badbones69.crazyenchantments.paper.api.economy.Currency;
 import com.badbones69.crazyenchantments.paper.api.economy.CurrencyAPI;
 import com.badbones69.crazyenchantments.paper.api.enums.CEnchantments;
@@ -21,6 +22,7 @@ import com.badbones69.crazyenchantments.paper.support.PluginSupport;
 import com.ryderbelserion.fusion.paper.scheduler.FoliaScheduler;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.damage.DamageSource;
 import org.bukkit.damage.DamageType;
 import org.bukkit.entity.Entity;
@@ -44,6 +46,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class SwordEnchantments implements Listener {
@@ -91,6 +94,7 @@ public class SwordEnchantments implements Listener {
                     cePlayer.getRageTask().cancel();
                     cePlayer.setRageMultiplier(0.0);
                     cePlayer.setRageLevel(0);
+                    cePlayer.setRageHits(0);
                     cePlayer.setRage(false);
 
                     rageInformPlayer(player, Messages.RAGE_DAMAGED, 0f);
@@ -164,27 +168,59 @@ public class SwordEnchantments implements Listener {
 
         // Check if CEPlayer is null as plugins like citizen use Player objects.
         if (cePlayer != null && EnchantUtils.isEventActive(CEnchantments.RAGE, damager, item, enchantments)) {
+            int enchantLevel = enchantments.get(CEnchantments.RAGE.getEnchantment());
+            List<RageStage> rageStages = getRageStages(enchantLevel);
 
             if (cePlayer.hasRage()) {
                 cePlayer.getRageTask().cancel();
 
-                if (cePlayer.getRageMultiplier() <= this.crazyManager.getRageMaxLevel())
-                    cePlayer.setRageMultiplier(cePlayer.getRageMultiplier() + (enchantments.get(CEnchantments.RAGE.getEnchantment()) * crazyManager.getRageIncrement()));
+                if (!rageStages.isEmpty()) {
+                    int hits = cePlayer.getRageHits() + 1;
+                    cePlayer.setRageHits(hits);
 
-                int rageUp = cePlayer.getRageLevel() + 1;
+                    double multiplier = getRageMultiplier(hits, rageStages);
+                    cePlayer.setRageMultiplier(multiplier);
 
-                if (cePlayer.getRageMultiplier().intValue() >= rageUp) {
-                    rageInformPlayer(damager, Messages.RAGE_RAGE_UP, Map.of("%Level%", String.valueOf(rageUp)), ((float) rageUp / (float) (this.crazyManager.getRageMaxLevel() + 1)));
-                    cePlayer.setRageLevel(rageUp);
+                    int rageUp = getRageStageReached(hits, rageStages);
+
+                    if (rageUp > cePlayer.getRageLevel()) {
+                        rageInformPlayer(damager, Messages.RAGE_RAGE_UP,
+                                Map.of("%Level%", formatMultiplier(multiplier)),
+                                Math.min(1f, (float) rageUp / (float) rageStages.size()));
+                        cePlayer.setRageLevel(rageUp);
+                    }
+                } else {
+                    if (cePlayer.getRageMultiplier() <= this.crazyManager.getRageMaxLevel())
+                        cePlayer.setRageMultiplier(cePlayer.getRageMultiplier() + (enchantLevel * crazyManager.getRageIncrement()));
+
+                    int rageUp = cePlayer.getRageLevel() + 1;
+
+                    if (cePlayer.getRageMultiplier().intValue() >= rageUp) {
+                        rageInformPlayer(damager, Messages.RAGE_RAGE_UP, Map.of("%Level%", String.valueOf(rageUp)), ((float) rageUp / (float) (this.crazyManager.getRageMaxLevel() + 1)));
+                        cePlayer.setRageLevel(rageUp);
+                    }
                 }
 
                 event.setDamage(event.getDamage() * cePlayer.getRageMultiplier());
             } else {
-                cePlayer.setRageMultiplier(1.0);
                 cePlayer.setRage(true);
-                cePlayer.setRageLevel(1);
 
-                rageInformPlayer(damager, Messages.RAGE_BUILDING, ((float) cePlayer.getRageLevel() / (float) this.crazyManager.getRageMaxLevel()));
+                if (!rageStages.isEmpty()) {
+                    cePlayer.setRageHits(1);
+                    double multiplier = getRageMultiplier(cePlayer.getRageHits(), rageStages);
+                    int stage = getRageStageReached(cePlayer.getRageHits(), rageStages);
+
+                    cePlayer.setRageMultiplier(multiplier);
+                    cePlayer.setRageLevel(stage);
+
+                    rageInformPlayer(damager, Messages.RAGE_BUILDING, Math.min(1f, (float) stage / (float) rageStages.size()));
+                } else {
+                    cePlayer.setRageHits(0);
+                    cePlayer.setRageMultiplier(1.0);
+                    cePlayer.setRageLevel(1);
+
+                    rageInformPlayer(damager, Messages.RAGE_BUILDING, ((float) cePlayer.getRageLevel() / (float) this.crazyManager.getRageMaxLevel()));
+                }
             }
 
             cePlayer.setRageTask(new FoliaScheduler(this.plugin, null, cePlayer.getPlayer()) {
@@ -193,6 +229,7 @@ public class SwordEnchantments implements Listener {
                     cePlayer.setRageMultiplier(0.0);
                     cePlayer.setRage(false);
                     cePlayer.setRageLevel(0);
+                    cePlayer.setRageHits(0);
 
                     rageInformPlayer(damager, Messages.RAGE_COOLED_DOWN, 0f);
                 }
@@ -386,4 +423,70 @@ public class SwordEnchantments implements Listener {
             player.sendMessage(message.getMessage());
         }
     }
+
+    private List<RageStage> getRageStages(int enchantLevel) {
+        FileConfiguration file = Files.ENCHANTMENTS.getFile();
+        String path = "Enchantments." + CEnchantments.RAGE.getName() + ".Strength";
+
+        List<RageStage> stages = new ArrayList<>();
+
+        for (String stageString : file.getStringList(path)) {
+            if (stageString == null || stageString.isBlank()) continue;
+
+            String value = stageString.trim();
+
+            int slashIndex = value.indexOf('/');
+            int colonIndex = value.indexOf(':');
+
+            // Supports list items like "1.5 / 30" and "1: 1.5 / 30".
+            if (colonIndex >= 0 && slashIndex > colonIndex) value = value.substring(colonIndex + 1).trim();
+
+            String[] split = value.replace(" ", "").split("/");
+            if (split.length != 2) continue;
+
+            try {
+                double multiplier = Double.parseDouble(split[0]);
+                int hitsRequired = Integer.parseInt(split[1]);
+
+                if (multiplier <= 0 || hitsRequired <= 0) continue;
+
+                stages.add(new RageStage(multiplier, hitsRequired));
+            } catch (NumberFormatException ignored) {
+            }
+        }
+
+        if (stages.isEmpty()) return stages;
+
+        int limit = Math.max(1, enchantLevel);
+        if (stages.size() > limit) stages = new ArrayList<>(stages.subList(0, limit));
+
+        return stages;
+    }
+
+    private double getRageMultiplier(int hits, List<RageStage> stages) {
+        double multiplier = 1.0;
+
+        for (RageStage stage : stages) {
+            if (hits >= stage.hitsRequired()) multiplier = stage.multiplier();
+        }
+
+        return multiplier;
+    }
+
+    private int getRageStageReached(int hits, List<RageStage> stages) {
+        int reached = 0;
+
+        for (RageStage stage : stages) {
+            if (hits >= stage.hitsRequired()) reached++;
+        }
+
+        return reached;
+    }
+
+    private String formatMultiplier(double multiplier) {
+        String value = String.format(Locale.US, "%.2f", multiplier);
+        return value.endsWith("00") ? value.substring(0, value.length() - 3) : value.endsWith("0") ? value.substring(0, value.length() - 1) : value;
+    }
+
+    private record RageStage(double multiplier, int hitsRequired) {}
 }

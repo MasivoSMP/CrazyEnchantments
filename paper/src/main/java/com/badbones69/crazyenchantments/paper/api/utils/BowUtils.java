@@ -20,8 +20,11 @@ import org.bukkit.util.Vector;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
 
 public class BowUtils {
 
@@ -36,6 +39,7 @@ public class BowUtils {
 
     // Sticky Shot
     private final List<Block> webBlocks = new ArrayList<>();
+    private final Set<UUID> stickyShotProcessed = new HashSet<>();
 
     private final List<EnchantedArrow> enchantedArrows = new ArrayList<>();
 
@@ -51,6 +55,7 @@ public class BowUtils {
         if (!this.enchantedArrows.contains(enchantedArrow) || enchantedArrow == null) return;
 
         this.enchantedArrows.remove(enchantedArrow);
+        if (enchantedArrow.arrow() != null) this.stickyShotProcessed.remove(enchantedArrow.arrow().getUniqueId());
     }
 
     public boolean isBowEnchantActive(CEnchantments customEnchant, EnchantedArrow enchantedArrow) {
@@ -104,8 +109,10 @@ public class BowUtils {
         if (enchantedArrow == null) return;
 
         Arrow arrow = enchantedArrow.getArrow();
+        if (arrow == null) return;
 
         if (!(EnchantUtils.isEventActive(CEnchantments.STICKY_SHOT, enchantedArrow.getShooter(), enchantedArrow.arrow().getWeapon(), enchantedArrow.getEnchantments()))) return;
+        if (!this.stickyShotProcessed.add(arrow.getUniqueId())) return;
 
         if (hitEntity == null) {
             Location entityLocation = arrow.getLocation();
@@ -118,55 +125,44 @@ public class BowUtils {
             new FoliaScheduler(this.plugin, entityLocation) {
                 @Override
                 public void run() {
-                    entityLocation.getBlock().setType(Material.AIR);
-                    webBlocks.remove(entityLocation.getBlock());
+                    if (entityLocation.getBlock().getType() == Material.COBWEB) {
+                        entityLocation.getBlock().setType(Material.AIR);
+                        webBlocks.remove(entityLocation.getBlock());
+                    }
                 }
             }.runDelayed(1 * 30);
         } else {
-            setWebBlocks(hitEntity);
+            setWebBlock(hitEntity);
         }
 
         arrow.remove();
     }
 
-    private void setWebBlocks(Entity hitEntity) {
+    private void setWebBlock(Entity hitEntity) {
         final Location location = hitEntity.getLocation();
 
         new FoliaScheduler(this.plugin, location) {
             @Override
             public void run() {
-                for (final Block block : getCube(hitEntity.getLocation())) {
+                final Block block = hitEntity.getLocation().getBlock();
+                if (block.getType() != Material.AIR) return;
 
-                    block.setType(Material.COBWEB);
+                block.setType(Material.COBWEB);
 
-                    webBlocks.add(block);
+                webBlocks.add(block);
 
-                    new FoliaScheduler(plugin, block.getLocation()) {
-                        @Override
-                        public void run() {
-                            if (block.getType() == Material.COBWEB) {
-                                block.setType(Material.AIR);
-                                webBlocks.remove(block);
-                            }
+                new FoliaScheduler(plugin, block.getLocation()) {
+                    @Override
+                    public void run() {
+                        if (block.getType() == Material.COBWEB) {
+                            block.setType(Material.AIR);
+                            webBlocks.remove(block);
                         }
-                    }.runDelayed(1 * 30); // 1.5 segundos. 20 ticks = 1 segundo, 30 ticks = 1.5 segundos.
-                } 
+                    }
+                }.runDelayed(1 * 30); // 1.5 segundos. 20 ticks = 1 segundo, 30 ticks = 1.5 segundos.
             }
         }.execute();
     }
 
     // Sticky Shot End!
-
-    private List<Block> getCube(Location start) {
-        List<Block> newBlocks = new ArrayList<>();
-
-        for (double x = start.getX() - 1; x <= start.getX() + 1; x++) {
-            for (double z = start.getZ() - 1; z <= start.getZ() + 1; z++) {
-                Location loc = new Location(start.getWorld(), x, start.getY(), z);
-                if (loc.getBlock().getType() == Material.AIR) newBlocks.add(loc.getBlock());
-            }
-        }
-
-        return newBlocks;
-    }
 }

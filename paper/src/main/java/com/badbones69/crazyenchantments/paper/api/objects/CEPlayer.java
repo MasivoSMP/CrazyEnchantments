@@ -37,6 +37,7 @@ public class CEPlayer {
     private Double rageMultiplier;
     private boolean hasRage;
     private int rageLevel;
+    private int rageHits;
     private ScheduledTask rageTask;
     private final Set<CEnchantments> onCooldown = new HashSet<>();
     
@@ -51,6 +52,7 @@ public class CEPlayer {
         this.hasRage = false;
         this.rageLevel = 0;
         this.rageMultiplier = 0.0;
+        this.rageHits = 0;
         this.rageTask = null;
     }
     
@@ -261,6 +263,21 @@ public class CEPlayer {
      */
     public void setRageLevel(int rageLevel) {
         this.rageLevel = rageLevel;
+    }
+
+    /**
+     * Get the amount of hits counted in the current rage window.
+     */
+    public int getRageHits() {
+        return this.rageHits;
+    }
+
+    /**
+     * Set the amount of hits counted in the current rage window.
+     * @param rageHits Hits in current rage window.
+     */
+    public void setRageHits(int rageHits) {
+        this.rageHits = rageHits;
     }
     
     /**

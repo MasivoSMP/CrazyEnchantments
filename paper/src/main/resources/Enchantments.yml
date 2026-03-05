@@ -21,6 +21,9 @@
 # Enchantment-Types:
 #   - 'Sword'
 #   - 'Axe'
+# Strength (optional):
+# For most enchants: one value per level (example: 1, 2, 3).
+# Rage special format: "multiplier / hits" (example: "1.5 / 30").
 ##########
 Enchantments:
   #Do not change this line.
@@ -166,22 +169,20 @@ Enchantments:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Resortes'
-    MaxPower: 5
+    MaxPower: 1
     Enchantment-Type: 'Boots'
+    Strength:
+      - 1
     Info:
-      Name: '&e&lResortes &7(&bI-&bV&7)'
+      Name: '&e&lResortes &7(&bI)'
       Description:
         - '&7Aumenta tu poder de'
         - '&7salto mientras lo usas.'
         - ''
         - '&6Se encuentra en:'
-        - '&7 - &a&l&nComún'
-        - '&7 - &9&l&nRaro'
         - '&7 - &4&l&nLegendario'
         - '&6Items Encantables: &aBotas'
     Categories:
-      - 'Common'
-      - 'Rare'
       - 'Legendary'
   #Do not change this line.
   Gears:
@@ -756,15 +757,14 @@ Enchantments:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Bendito'
-    MaxPower: 3
-    Enchantment-Type: 'Armor'
+    MaxPower: 1
+    Enchantment-Type: 'Chestpalte'
+    Cooldown: 300
     Chance-System:
-      Base: 0.5
-      Increase: 0.5
+      Base: 1
+      Increase: 1
     Strength:
-      - 1
-      - 2
-      - 3
+      - 20
     Info:
       Name: '&e&lBendito &7(&bI-&bV&7)'
       Description:
@@ -772,14 +772,10 @@ Enchantments:
         - '&7curarte mientras te atacan.'
         - ''
         - '&6Se encuentra en:'
-        - '&7 - &a&l&nComún'
-        - '&7 - &9&l&nRaro'
-        - '&7 - &4&l&nLegendario'
-        - '&6Items Encantables: &aArmadura'
+        - '&7 - &5&l&nMitico'
+        - '&6Items Encantables: &aPechera'
     Categories:
-      - 'Common'
-      - 'Rare'
-      - 'Legendary'
+      - 'Mythical'
   #Do not change this line.
   Freeze:
     Enabled: true
@@ -1452,6 +1448,10 @@ Enchantments:
     Name: '&7Enojo'
     MaxPower: 3
     Enchantment-Type: 'Sword'
+    Strength:
+      - '1.5 / 30'
+      - '2.0 / 60'
+      - '2.5 / 90'
     Info:
       Name: '&e&lEnojo &7(&bI-&bIII&7)'
       Description:
@@ -2172,19 +2172,19 @@ Enchantments:
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Agil'
     MaxPower: 1
-    Enchantment-Type: 'Boots'
+    Enchantment-Type: 'Leggings'
     Chance-System:
       Base: 2
       Increase: 0
     Info:
-      Name: '&e&lAgil &7(&bI-&bIII&7)'
+      Name: '&e&lAgil &7(&bI)'
       Description:
         - '&7Tienes una probabilidad de'
         - '&7esquivar un ataque.'
         - ''
         - '&6Se encuentra en:'
         - '&7 - &5&l&nMitico'
-        - '&6Items Encantables: &aBotas'
+        - '&6Items Encantables: &aPantalones'
     Categories:
       - 'Mythical'
   #Do not change this line.
@@ -2193,20 +2193,20 @@ Enchantments:
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Agachado'
     MaxPower: 1
-    Enchantment-Type: 'Armor'
+    Enchantment-Type: 'Leggings'
     Chance-System:
       Base: 10
       Increase: 0
     Info:
       Name: '&e&lAgachado &7(&bI&7)'
       Description:
-        - '&7Durante un combate recibes'
-        - '&610% &7menos daño'
+        - '&7Durante un combate tienes una probabilidad'
+        - '&7de recibir &610% &7menos daño'
         - '&7mientras estes agachado.'
         - ''
         - '&6Se encuentra en:'
         - '&7 - &5&l&nMitico'
-        - '&6Items Encantables: &aArmadura'
+        - '&6Items Encantables: &aPantalones'
     Categories:
       - 'Mythical'
   #Do not change this line.
@@ -2215,7 +2215,7 @@ Enchantments:
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&7Redireccionamiento'
     MaxPower: 3
-    Enchantment-Type: 'Armor'
+    Enchantment-Type: 'Leggings'
     Chance-System:
       Base: 1
       Increase: 1
@@ -2228,7 +2228,7 @@ Enchantments:
         - ''
         - '&6Se encuentra en:'
         - '&7 - &5&l&nMitico'
-        - '&6Items Encantables: &aArmadura'
+        - '&6Items Encantables: &aPantalones'
     Categories:
       - 'Mythical'
   #Do not change this line.
