@@ -113,28 +113,22 @@ Enchantments:
     Enabled: true
     Sound: "ENTITY_PLAYER_LEVELUP"
     Name: '&b&lSobrecarga'
-    MaxPower: 5
-    Enchantment-Type: 'Armor'
+    MaxPower: 3
+    Enchantment-Type: 'Chestplate'
     Strength:
-      - 1
       - 2
-      - 3
       - 4
-      - 5
+      - 6
     Info:
-      Name: '&e&lSobrecarga &7(&bI-&bV&7)'
+      Name: '&e&lSobrecarga &7(&bI-&bIII&7)'
       Description:
         - '&7Obtienes una mejora de vida'
         - '&7cuando lo equipas.'
         - ''
         - '&6Se encuentra en:'
-        - '&7 - &a&l&nComún'
-        - '&7 - &9&l&nRaro'
         - '&7 - &4&l&nLegendario'
-        - '&6Items Encantables: &aArmadura'
+        - '&6Items Encantables: &aPechera'
     Categories:
-      - 'Common'
-      - 'Rare'
       - 'Legendary'
   #Do not change this line.
   SelfDestruct:
